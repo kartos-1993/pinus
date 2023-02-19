@@ -1,6 +1,14 @@
-import '../styles/globals.css'
+
+import "../styles/Home.scss";
+import "../styles/globals.css"
+
+
+
+import { useEffect } from 'react';
+
 
 function MyApp({ Component, pageProps }) {
+  
   return <Component {...pageProps} />
 }
 
