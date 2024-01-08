@@ -10,7 +10,7 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      sans: ["Lobster", "sans-serif"],
+      sans: ["Cormorant Garamond", "sans-serif"],
       // serif: ["serif"],
     },
     extend: {},

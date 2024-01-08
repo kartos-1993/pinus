@@ -3,7 +3,9 @@ import Image from "next/image";
 import { useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import logo from "../public/assets/pinuslogosvg.svg";
+
+import logo from "../public/assets/pinuslogopng.png";
+import { Sidebar } from "../components/Sidebar/Sidebar";
 
 export default function Home() {
   return (
@@ -28,94 +30,93 @@ export default function Home() {
           sizes="16x16"
           href="/favicon-16x16.png"
         />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff"></meta>
       </Head>
-      <main className="main">
-        <motion.div
-          className="h-full w-full bg-white z-10 absolute "
-          initial={{ scale: 2 }}
-          animate={{ x: "100%", scale: 1 }}
-          transition={{ duration: 1.8, ease: "easeInOut" }}
-          exit={{}}
-        ></motion.div>
+      <main className=" w-full h-screen overflow-x-hidden">
         <motion.header
           className="header"
-          initial={{ y: -50, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           exit={{ y: -50, opacity: 0 }}
-          transition={{ duration: 2, ease: "easeInOut" }}
+          transition={{ duration: 3, ease: "easeInOut" }}
         >
-          <nav>
+          <nav className=" pt-3">
             <div className="logo-container">
-              <Image src={logo} alt="logo"  width={100}
-              height ={100} priority/>
+              <Image className="w-12" src={logo} alt="logo" priority={true} />
             </div>
-
             {/* <ul className="flex text-white">
-              <li>menu</li>
-              <li>packages</li>
-              <li>contact</li>
+              <li className="py-0 px-4">menu</li>
+              <li className="py-0 px-4">packages</li>
+              <li className="py-0 px-4">contact</li>
             </ul> */}
+            <Sidebar />
           </nav>
         </motion.header>
-        <section className="hero">
-          <div className="container">
-            <motion.div
-              className="text-wrapper"
-              initial={{ opacity: 0, y: 100 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 100 }}
-              transition={{ duration: 2.5, ease: "easeInOut" }}
-            >
-              <h1 className="section-text1 absolute">
-                <Link href="/travel" className=" text-3xl">
-                  Travel
-                </Link>
-                <Link href="/relax" className=" text-3xl">
-                  Travel
-                </Link>
-                <Link href="/relax" className=" text-3xl">
-                  Event
-                </Link>
-                {/* <Image
-                  className=""
-                  priority
-                  src="/assets/e.svg"
-                  alt="pinus hotel"
-                  // width={2578}
-                  height={1024}
-                  width={300}
-                /> */}
-              </h1>
-            </motion.div>
 
-            <motion.div
-              className="img_container"
-              initial={{ y: -100, scale: 0.5 }}
-              animate={{ y: 0, scale: 1 }}
-              exit={{ y: -100, scale: 0.5 }}
-              transition={{ duration: 1.5, ease: "easeInOut" }}
-            >
-              <Link href="/travel" className="absolute z-index">
-                Travel
-              </Link>
-              <Image
-                className="hero-image"
-                priority
-                src="/hero1.webp"
-                alt="pinus hotel"
-                // width={2578}
-                // height={1879}
-                width={1920}
-                height={1080}
+        {/**Hero section start */}
+        <section className="h-screen flex relative">
+          <motion.div
+            className="h-full w-full bg-white z-10 absolute "
+            initial={{ scale: 2 }}
+            animate={{ x: "100%", scale: 1 }}
+            transition={{ duration: 1.8, ease: "easeInOut" }}
+            // exit={{ x: "100%", scale: 0 }}
+          ></motion.div>
+          <motion.div
+            className="z-20 flex justify-center w-full text-white"
+            initial={{ opacity: 0, y: "90%" }}
+            animate={{ opacity: 1, y: "40%" }}
+            // exit={{ opacity: 0, y: 100 }}
+            transition={{ duration: 2.5, ease: "easeInOut" }}
+          >
+            <div className="section-text1 absolute text-4xl md:text-5xl lg:text-6xl px-4 ">
+              A Serene Escape in the Heart of Nature
+            </div>
+          </motion.div>
+          <motion.div
+            className="absolute w-full bg-red-600 h-screen flex justify-center overflow-hidden "
+            initial={{ y: -100, scale: 0 }}
+            animate={{ y: 0, scale: 1 }}
+            exit={{ y: -100 }}
+            transition={{ duration: 1.5, ease: "easeInOut" }}
+          >
+            <picture>
+              <source srcSet="/image-mobile.png" media="(max-width: 650px)" />
+              <source srcSet="/image-tablet.png" media="(max-width: 1023px)" />
+
+              <source
+                srcSet="/image-desktop1.png"
+                media="(min-width: 1024px)"
               />
-            </motion.div>
-          </div>
+
+              <img
+                src="/image.jpg"
+                alt="image"
+                className="w-full object-cover"
+              />
+            </picture>
+          </motion.div>
         </section>
-        <section>
-          <h1 className="text-3xl font-bold underline">Hello world!</h1>
+        {/**Hero section end */}
+
+        <section className="b">
+          <h1 className="">Welcome to Pinus Hotel</h1>
+          <h2>A Serene Escape in the Heart of Nature</h2>
+          <p>
+            Escape to a world of natural beauty and tranquility at our hotel,
+            surrounded by the serene splendor of nature. Our secluded location
+            allows you to unwind and immerse yourself in the sights, sounds, and
+            scents of the great outdoors. From verdant forests to flowing
+            streams, our surroundings offer the perfect backdrop for your next
+            adventure or peaceful retreat. Whether seeking a romantic getaway or
+            a family vacation, our comfortable rooms and friendly staff will
+            make your stay unforgettable. Come and experience the beauty and
+            serenity of nature at our hotel. We t wait to welcome you!
+          </p>
         </section>
       </main>
 
@@ -123,3 +124,4 @@ export default function Home() {
     </>
   );
 }
+// https://dev.to/dancrtis/ci-cd-pipeline-with-netlify-and-github-actions-bcm
