@@ -5,6 +5,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
 import logo from "../public/assets/pinuslogopng.png";
+import heroImage from "../public/image-desktop1.png";
+
 import { Sidebar } from "../components/Sidebar/Sidebar";
 
 export default function Home() {
@@ -78,32 +80,22 @@ export default function Home() {
             </div>
           </motion.div>
           <motion.div
-            className="absolute w-full bg-red-600 h-screen flex justify-center overflow-hidden "
+            className="absolute w-full h-screen flex justify-center overflow-hidden "
             initial={{ y: -100, scale: 0 }}
             animate={{ y: 0, scale: 1 }}
             exit={{ y: -100 }}
             transition={{ duration: 1.5, ease: "easeInOut" }}
           >
             <picture>
-              <source srcSet="/image-mobile.png" media="(max-width: 650px)" />
-              <source srcSet="/image-tablet.png" media="(max-width: 1023px)" />
-
-              <source
-                srcSet="/image-desktop1.png"
-                media="(min-width: 1024px)"
-              />
-
-              <img
-                src="/image.jpg"
-                alt="image"
-                className="w-full object-cover"
-              />
+              <source media="(max-width: 636px)" srcSet="/image-mobile.jpg" />
+              <source media="(max-width: 1055px)" srcSet="/image-tablet.png" />
+              <img src="/image-desktop.png" alt="image" />
             </picture>
           </motion.div>
         </section>
         {/**Hero section end */}
 
-        <section className="b">
+        <section className="h-screen">
           <h1 className="">Welcome to Pinus Hotel</h1>
           <h2>A Serene Escape in the Heart of Nature</h2>
           <p>
