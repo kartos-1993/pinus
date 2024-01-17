@@ -8,6 +8,7 @@ import logo from "../public/assets/pinuslogopng.png";
 import heroImage from "../public/image-desktop1.png";
 
 import { Sidebar } from "../components/Sidebar/Sidebar";
+import Reveal from "../components/Reveal";
 
 export default function Home() {
   return (
@@ -38,7 +39,7 @@ export default function Home() {
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff"></meta>
       </Head>
-      <main className=" w-full h-screen overflow-x-hidden">
+      <main className="w-full h-screen overflow-x-hidden">
         <motion.header
           className="header"
           initial={{ opacity: 0 }}
@@ -95,20 +96,54 @@ export default function Home() {
         </section>
         {/**Hero section end */}
 
-        <section className="h-screen">
-          <h1 className="">Welcome to Pinus Hotel</h1>
-          <h2>A Serene Escape in the Heart of Nature</h2>
-          <p>
-            Escape to a world of natural beauty and tranquility at our hotel,
-            surrounded by the serene splendor of nature. Our secluded location
-            allows you to unwind and immerse yourself in the sights, sounds, and
-            scents of the great outdoors. From verdant forests to flowing
-            streams, our surroundings offer the perfect backdrop for your next
-            adventure or peaceful retreat. Whether seeking a romantic getaway or
-            a family vacation, our comfortable rooms and friendly staff will
-            make your stay unforgettable. Come and experience the beauty and
-            serenity of nature at our hotel. We t wait to welcome you!
-          </p>
+        <section className="h-3/4 p-8">
+          <Reveal>
+            <h1 className=" text-4xl text-center mb-4">
+              Welcome to Pinus Hotel
+            </h1>
+          </Reveal>
+
+          <Reveal>
+            <p className=" text-xl text-center px-8">
+              Escape to our tranquil hotel surrounded by pine forests for a
+              memorable nature retreat. Perfect for romantic getaways or family
+              vacations. Unwind and immerse yourself in serene beauty. We cannot
+              wait to welcome you!
+            </p>
+          </Reveal>
+        </section>
+
+        <section className="h-3/4 p-8">
+          <Reveal>
+            <h1 className=" text-4xl text-center mb-4">
+              Welcome to Pinus Hotel
+            </h1>
+          </Reveal>
+
+          <Reveal>
+            <p className=" text-xl text-center px-8">
+              Escape to our tranquil hotel surrounded by pine forests for a
+              memorable nature retreat. Perfect for romantic getaways or family
+              vacations. Unwind and immerse yourself in serene beauty. We cannot
+              wait to welcome you!
+            </p>
+          </Reveal>
+        </section>
+        <section className="h-3/4 p-8">
+          <Reveal>
+            <h1 className=" text-4xl text-center mb-4">
+              Welcome to Pinus Hotel
+            </h1>
+          </Reveal>
+
+          <Reveal>
+            <p className=" text-xl text-center px-8">
+              Escape to our tranquil hotel surrounded by pine forests for a
+              memorable nature retreat. Perfect for romantic getaways or family
+              vacations. Unwind and immerse yourself in serene beauty. We cannot
+              wait to welcome you!
+            </p>
+          </Reveal>
         </section>
       </main>
 
