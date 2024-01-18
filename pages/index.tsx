@@ -9,6 +9,7 @@ import heroImage from "../public/image-desktop1.png";
 
 import { Sidebar } from "../components/Sidebar/Sidebar";
 import Reveal from "../components/Reveal";
+import { source_sans_3 } from "./_app";
 
 export default function Home() {
   return (
@@ -98,18 +99,20 @@ export default function Home() {
 
         <section className="h-3/4 p-8">
           <Reveal>
-            <h1 className=" text-4xl text-center mb-4">
+            <h1 className="text-4xl text-center mb-4">
               Welcome to Pinus Hotel
             </h1>
           </Reveal>
 
           <Reveal>
-            <p className=" text-xl text-center px-8">
-              Escape to our tranquil hotel surrounded by pine forests for a
-              memorable nature retreat. Perfect for romantic getaways or family
-              vacations. Unwind and immerse yourself in serene beauty. We cannot
-              wait to welcome you!
-            </p>
+            <div style={source_sans_3.style}>
+              <p className="text-xl text-center px-4 font-light">
+                Escape to our tranquil hotel surrounded by pine forests for a
+                memorable nature retreat. Perfect for romantic getaways or
+                family vacations. Unwind and immerse yourself in serene beauty.
+                We cannot wait to welcome you!
+              </p>
+            </div>
           </Reveal>
         </section>
 
