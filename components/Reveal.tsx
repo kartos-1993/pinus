@@ -8,7 +8,8 @@ interface Props {
 
 const Reveal = ({ children, width = "100%" }: Props) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  // const isInView = useInView(ref, { once: true });
+  const isInView = useInView(ref);
   const mainControls = useAnimation();
   useEffect(() => {
     if (isInView) {
@@ -20,7 +21,7 @@ const Reveal = ({ children, width = "100%" }: Props) => {
     <div ref={ref} style={{ position: "relative", width, overflow: "hidden" }}>
       <motion.div
         variants={{
-          hidden: { opacity: 0, y: 75 },
+          hidden: { opacity: 0, y: 200 },
           visible: { opacity: 1, y: 0 },
         }}
         initial="hidden"

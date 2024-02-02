@@ -10,8 +10,8 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      sans: ["Cormorant Garamond", "sans-serif"],
-      // serif: ["serif"],
+      sans: ["var(--font-source_sans_3)"],
+      mono: ["var(--font-comorant_garamond)"],
     },
     extend: {},
   },

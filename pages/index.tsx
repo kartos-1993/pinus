@@ -4,12 +4,17 @@ import { useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
-import logo from "../public/assets/pinuslogopng.png";
 import heroImage from "../public/image-desktop1.png";
 
-import { Sidebar } from "../components/Sidebar/Sidebar";
 import Reveal from "../components/Reveal";
-import { source_sans_3 } from "./_app";
+import { CormorantGaramond, source_sans_3 } from "./_app";
+
+import Example from "../components/HorizontalCaraousel";
+import Header from "../components/Header";
+import first from "../public/1.jpg";
+import second from "../public/2.jpg";
+import third from "../public/3.jpg";
+import forth from "../public/4.jpg";
 
 export default function Home() {
   return (
@@ -40,26 +45,10 @@ export default function Home() {
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff"></meta>
       </Head>
-      <main className="w-full h-screen overflow-x-hidden">
-        <motion.header
-          className="header"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ y: -50, opacity: 0 }}
-          transition={{ duration: 3, ease: "easeInOut" }}
-        >
-          <nav className=" pt-3">
-            <div className="logo-container">
-              <Image className="w-12" src={logo} alt="logo" priority={true} />
-            </div>
-            {/* <ul className="flex text-white">
-              <li className="py-0 px-4">menu</li>
-              <li className="py-0 px-4">packages</li>
-              <li className="py-0 px-4">contact</li>
-            </ul> */}
-            <Sidebar />
-          </nav>
-        </motion.header>
+      <main
+        className={`w-full h-screen overflow-x-hidden ${source_sans_3.variable} ${CormorantGaramond.variable}`}
+      >
+        <Header />
 
         {/**Hero section start */}
         <section className="h-screen flex relative">
@@ -72,12 +61,12 @@ export default function Home() {
           ></motion.div>
           <motion.div
             className="z-20 flex justify-center w-full text-white"
-            initial={{ opacity: 0, y: "90%" }}
+            initial={{ opacity: 0, y: "70%" }}
             animate={{ opacity: 1, y: "40%" }}
             // exit={{ opacity: 0, y: 100 }}
             transition={{ duration: 2.5, ease: "easeInOut" }}
           >
-            <div className="section-text1 absolute text-4xl md:text-5xl lg:text-6xl px-4 ">
+            <div className="section-text1 absolute text-4xl md:text-5xl lg:text-6xl px-4 font-mono font-light">
               A Serene Escape in the Heart of Nature
             </div>
           </motion.div>
@@ -97,7 +86,7 @@ export default function Home() {
         </section>
         {/**Hero section end */}
 
-        <section className="h-3/4 p-8">
+        <section className="p-8 h-4/6 flex justify-center flex-col">
           <Reveal>
             <h1 className="text-4xl text-center mb-4">
               Welcome to Pinus Hotel
@@ -105,8 +94,8 @@ export default function Home() {
           </Reveal>
 
           <Reveal>
-            <div style={source_sans_3.style}>
-              <p className="text-xl text-center px-4 font-light">
+            <div className="mb-4">
+              <p className="text-lg text-center px-4 font-sans font-extralight">
                 Escape to our tranquil hotel surrounded by pine forests for a
                 memorable nature retreat. Perfect for romantic getaways or
                 family vacations. Unwind and immerse yourself in serene beauty.
@@ -115,37 +104,29 @@ export default function Home() {
             </div>
           </Reveal>
         </section>
-
-        <section className="h-3/4 p-8">
+        <section className="">
           <Reveal>
-            <h1 className=" text-4xl text-center mb-4">
-              Welcome to Pinus Hotel
-            </h1>
+            <div className="p-4">
+              <Image alt="a" src={first} width={500} height={900} />
+            </div>
           </Reveal>
-
           <Reveal>
-            <p className=" text-xl text-center px-8">
-              Escape to our tranquil hotel surrounded by pine forests for a
-              memorable nature retreat. Perfect for romantic getaways or family
-              vacations. Unwind and immerse yourself in serene beauty. We cannot
-              wait to welcome you!
-            </p>
+            <div className="p-4">
+              <Image alt="a" src={second} width={500} height={900} />
+            </div>
           </Reveal>
-        </section>
-        <section className="h-3/4 p-8">
           <Reveal>
-            <h1 className=" text-4xl text-center mb-4">
-              Welcome to Pinus Hotel
-            </h1>
+            <div className="p-4">
+              <Image alt="a" src={third} width={500} height={900} />
+            </div>
           </Reveal>
-
           <Reveal>
-            <p className=" text-xl text-center px-8">
-              Escape to our tranquil hotel surrounded by pine forests for a
-              memorable nature retreat. Perfect for romantic getaways or family
-              vacations. Unwind and immerse yourself in serene beauty. We cannot
-              wait to welcome you!
-            </p>
+            <div className="p-4">
+              <Image alt="a" src={forth} width={500} height={900} />
+            </div>
+          </Reveal>{" "}
+          <Reveal>
+            <div style={source_sans_3.style}></div>
           </Reveal>
         </section>
       </main>
