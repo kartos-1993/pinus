@@ -60,15 +60,13 @@ export default function Home() {
             // exit={{ x: "100%", scale: 0 }}
           ></motion.div>
           <motion.div
-            className="z-20 flex justify-center w-full text-white"
-            initial={{ opacity: 0, y: "70%" }}
-            animate={{ opacity: 1, y: "40%" }}
+            className="z-20 absolute w-full text-white text-center text-4xl md:text-5xl lg:text-6xl px-4 font-mono font-light"
+            initial={{ opacity: 0, top: "70%" }}
+            animate={{ opacity: 1, top: "40%" }}
             // exit={{ opacity: 0, y: 100 }}
             transition={{ duration: 2.5, ease: "easeInOut" }}
           >
-            <div className="section-text1 absolute text-4xl md:text-5xl lg:text-6xl px-4 font-mono font-light">
-              A Serene Escape in the Heart of Nature
-            </div>
+            A Serene Escape in the Heart of Nature
           </motion.div>
           <motion.div
             className="absolute w-full h-screen flex justify-center overflow-hidden "
@@ -86,16 +84,16 @@ export default function Home() {
         </section>
         {/**Hero section end */}
 
-        <section className="p-8 h-4/6 flex justify-center flex-col">
+        <section className=" py-20 px-6">
           <Reveal>
-            <h1 className="text-4xl text-center mb-4">
+            <h1 className="text-4xl text-center mb-4 font-mono font-light">
               Welcome to Pinus Hotel
             </h1>
           </Reveal>
 
           <Reveal>
-            <div className="mb-4">
-              <p className="text-lg text-center px-4 font-sans font-extralight">
+            <div className="">
+              <p className="text-lg text-center px-4 font-sans font-extralight mt-2">
                 Escape to our tranquil hotel surrounded by pine forests for a
                 memorable nature retreat. Perfect for romantic getaways or
                 family vacations. Unwind and immerse yourself in serene beauty.
@@ -107,7 +105,7 @@ export default function Home() {
         <section className="">
           <Reveal>
             <div className="p-4">
-              <Image alt="a" src={first} width={500} height={900} />
+              <Image alt="a" src={first} width={450} height={600} />
             </div>
           </Reveal>
           <Reveal>
