@@ -9,12 +9,7 @@ import heroImage from "../public/image-desktop1.png";
 import Reveal from "../components/Reveal";
 import { CormorantGaramond, source_sans_3 } from "./_app";
 
-import Example from "../components/HorizontalCaraousel";
 import Header from "../components/Header";
-import first from "../public/1.jpg";
-import second from "../public/2.jpg";
-import third from "../public/3.jpg";
-import forth from "../public/4.jpg";
 
 export default function Home() {
   return (
@@ -105,22 +100,22 @@ export default function Home() {
         <section className="">
           <Reveal>
             <div className="p-4">
-              <Image alt="a" src={first} width={450} height={600} />
+              <Image alt="a" src="/1.jpg" width={450} height={600} />
             </div>
           </Reveal>
           <Reveal>
             <div className="p-4">
-              <Image alt="a" src={second} width={500} height={900} />
+              <Image alt="a" src="/2.jpg" width={500} height={900} />
             </div>
           </Reveal>
           <Reveal>
             <div className="p-4">
-              <Image alt="a" src={third} width={500} height={900} />
+              <Image alt="a" src="/3.jpg" width={500} height={900} />
             </div>
           </Reveal>
           <Reveal>
             <div className="p-4">
-              <Image alt="a" src={forth} width={500} height={900} />
+              <Image alt="a" src="/4.jpg" width={500} height={900} />
             </div>
           </Reveal>{" "}
           <Reveal>
