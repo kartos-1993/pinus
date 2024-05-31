@@ -9,6 +9,14 @@ import heroImage from "../public/image-desktop1.png";
 import { CormorantGaramond, source_sans_3 } from "./_app";
 
 import Header from "../components/Header";
+import { EmblaOptionsType } from "embla-carousel";
+
+import "../components/Carousel/embla.css";
+import EmblaCarousel from "@/components/Carousel/Carousel";
+
+const OPTIONS: EmblaOptionsType = { dragFree: true, loop: true };
+const SLIDE_COUNT = 5;
+const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
 export default function Home() {
   return (
@@ -78,23 +86,20 @@ export default function Home() {
         </section>
         {/**Hero section end */}
 
-        <section className=" py-12 px-6">
-          <div className="">
-            <p className=" text-2xl font-mono text-center font-normal">
-              Escape to our tranquil hotel surrounded by pine forests for a
-              memorable nature retreat. Perfect for romantic getaways or family
-              vacations. Unwind and immerse yourself in serene beauty. We cannot
-              wait to welcome you!
-            </p>
-          </div>
+        <section className="py-12 px-6">
+          <h1 className="text-4xl text-center mb-8 font-mono font-light">
+            Welcome to Pinus Hotel
+          </h1>
+          <p className="text-3xl font-mono text-center font-normal">
+            Escape to our tranquil hotel surrounded by pine forests for a
+            memorable nature retreat. Perfect for romantic getaways or family
+            vacations. Unwind and immerse yourself in serene beauty. We cannot
+            wait to welcome you!
+          </p>
         </section>
         <section className=""></section>
         <section className=" text-center text-4xl font-normal py-12 px-6">
-          {/* <Reveal>
-            <h1 className="text-4xl text-center mb-4 font-mono font-light">
-              Welcome to Pinus Hotel
-            </h1>
-          </Reveal> */}
+          <EmblaCarousel slides={SLIDES} options={OPTIONS} />
         </section>
       </main>
 
