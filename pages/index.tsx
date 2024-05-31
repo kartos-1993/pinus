@@ -6,7 +6,6 @@ import Link from "next/link";
 
 import heroImage from "../public/image-desktop1.png";
 
-import Reveal from "../components/Reveal";
 import { CormorantGaramond, source_sans_3 } from "./_app";
 
 import Header from "../components/Header";
@@ -79,48 +78,23 @@ export default function Home() {
         </section>
         {/**Hero section end */}
 
-        <section className=" py-20 px-6">
-          <Reveal>
+        <section className=" py-12 px-6">
+          <div className="">
+            <p className=" text-2xl font-mono text-center font-normal">
+              Escape to our tranquil hotel surrounded by pine forests for a
+              memorable nature retreat. Perfect for romantic getaways or family
+              vacations. Unwind and immerse yourself in serene beauty. We cannot
+              wait to welcome you!
+            </p>
+          </div>
+        </section>
+        <section className=""></section>
+        <section className=" text-center text-4xl font-normal py-12 px-6">
+          {/* <Reveal>
             <h1 className="text-4xl text-center mb-4 font-mono font-light">
               Welcome to Pinus Hotel
             </h1>
-          </Reveal>
-
-          <Reveal>
-            <div className="">
-              <p className="text-lg text-center px-4 font-sans font-extralight mt-2">
-                Escape to our tranquil hotel surrounded by pine forests for a
-                memorable nature retreat. Perfect for romantic getaways or
-                family vacations. Unwind and immerse yourself in serene beauty.
-                We cannot wait to welcome you!
-              </p>
-            </div>
-          </Reveal>
-        </section>
-        <section className="">
-          <Reveal>
-            <div className="p-4">
-              <Image alt="a" src="/1.jpg" width={450} height={600} />
-            </div>
-          </Reveal>
-          <Reveal>
-            <div className="p-4">
-              <Image alt="a" src="/2.jpg" width={500} height={900} />
-            </div>
-          </Reveal>
-          <Reveal>
-            <div className="p-4">
-              <Image alt="a" src="/3.jpg" width={500} height={900} />
-            </div>
-          </Reveal>
-          <Reveal>
-            <div className="p-4">
-              <Image alt="a" src="/4.jpg" width={500} height={900} />
-            </div>
-          </Reveal>{" "}
-          <Reveal>
-            <div style={source_sans_3.style}></div>
-          </Reveal>
+          </Reveal> */}
         </section>
       </main>
 
