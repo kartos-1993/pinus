@@ -18,6 +18,14 @@ const OPTIONS: EmblaOptionsType = { dragFree: true, loop: true };
 const SLIDE_COUNT = 5;
 const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
+const slides = [
+  { src: "/assets/slide/slide1.jpeg", alt: "Slide 1" },
+  { src: "/assets/slide/slide2.jpeg", alt: "Slide 2" },
+  { src: "/assets/slide/slide3.jpeg", alt: "Slide 3" },
+  { src: "/assets/slide/slide4.jpeg", alt: "Slide 4" },
+  { src: "/assets/slide/slide5.jpeg", alt: "Slide 5" },
+];
+
 export default function Home() {
   return (
     <>
@@ -62,7 +70,7 @@ export default function Home() {
             // exit={{ x: "100%", scale: 0 }}
           ></motion.div>
           <motion.div
-            className="z-20 absolute w-full text-white text-center text-4xl md:text-5xl lg:text-6xl px-4 font-mono font-light"
+            className="z-20 absolute w-full text-white text-left text-4xl md:text-5xl lg:text-6xl px-4 font-mono font-light lg:text-center"
             initial={{ opacity: 0, top: "70%" }}
             animate={{ opacity: 1, top: "40%" }}
             // exit={{ opacity: 0, y: 100 }}
@@ -98,8 +106,8 @@ export default function Home() {
           </p>
         </section>
         <section className=""></section>
-        <section className=" text-center text-4xl font-normal py-12 px-6">
-          <EmblaCarousel slides={SLIDES} options={OPTIONS} />
+        <section className=" text-center text-4xl font-normal py-12 px-2">
+          <EmblaCarousel slides={slides} options={OPTIONS} />
         </section>
       </main>
 

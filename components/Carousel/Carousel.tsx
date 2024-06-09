@@ -7,11 +7,12 @@ import {
 import useEmblaCarousel from "embla-carousel-react";
 import { NextButton, PrevButton, usePrevNextButtons } from "./ArrowButton";
 import { DotButton, useDotButton } from "./CarouselDot";
+import Image from "next/image";
 
 const TWEEN_FACTOR_BASE = 0.2;
 
 type PropType = {
-  slides: number[];
+  slides: { src: string; alt: string }[];
   options?: EmblaOptionsType;
 };
 
@@ -100,14 +101,17 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     <div className="embla">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
-          {slides.map((index) => (
+          {slides.map((slide, index) => (
             <div className="embla__slide" key={index}>
               <div className="embla__parallax">
                 <div className="embla__parallax__layer">
-                  <img
+                  <Image
                     className="embla__slide__img embla__parallax__img"
-                    src={`https://picsum.photos/600/350?v=${index}`}
-                    alt="Your alt text"
+                    src={slide.src}
+                    alt={slide.alt}
+                    layout="responsive"
+                    width={600}
+                    height={350}
                   />
                 </div>
               </div>
