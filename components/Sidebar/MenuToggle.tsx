@@ -1,8 +1,13 @@
-import { motion } from "framer-motion";
+import { SVGMotionProps, motion } from "framer-motion";
 import * as React from "react";
 
+interface PathProps extends SVGMotionProps<SVGPathElement> {}
 
-const Path = (props) => (
+interface MenuToggleProps {
+  toggle: () => void;
+}
+
+const Path: React.FC<PathProps> = (props) => (
   <motion.path
     fill="transparent"
     strokeWidth="3"
@@ -12,7 +17,7 @@ const Path = (props) => (
   />
 );
 
-export const MenuToggle = ({ toggle }) => (
+export const MenuToggle: React.FC<MenuToggleProps> = ({ toggle }) => (
   <button onClick={toggle}>
     <svg width="23" height="23" viewBox="0 0 23 23">
       <Path

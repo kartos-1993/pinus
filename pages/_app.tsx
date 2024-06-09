@@ -1,5 +1,6 @@
 import "../styles/Home.scss";
 import "../styles/globals.css";
+import { AppProps } from "next/app";
 
 import { useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
@@ -17,7 +18,7 @@ export const CormorantGaramond = Cormorant_Garamond({
   variable: "--font-comorant_garamond",
 });
 
-function MyApp({ Component, pageProps, router }) {
+function MyApp({ Component, pageProps, router }: AppProps) {
   console.log("font", source_sans_3);
   return (
     <AnimatePresence mode="wait">
