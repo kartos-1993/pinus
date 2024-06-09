@@ -11,7 +11,6 @@ import { CormorantGaramond, source_sans_3 } from "./_app";
 import Header from "../components/Header";
 import { EmblaOptionsType } from "embla-carousel";
 
-import "../components/Carousel/embla.css";
 import EmblaCarousel from "@/components/Carousel/Carousel";
 
 const OPTIONS: EmblaOptionsType = { dragFree: true, loop: true };

@@ -5,6 +5,7 @@ import { AppProps } from "next/app";
 import { useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
 import { Source_Sans_3, Cormorant_Garamond } from "next/font/google";
+import "../styles/embla.css";
 
 export const source_sans_3 = Source_Sans_3({
   subsets: ["latin"],
