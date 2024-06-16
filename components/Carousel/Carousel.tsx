@@ -109,7 +109,6 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                     className="embla__slide__img embla__parallax__img"
                     src={slide.src}
                     alt={slide.alt}
-                    layout="responsive"
                     width={600}
                     height={350}
                   />
@@ -120,7 +119,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
         </div>
       </div>
 
-      <div className="embla__controls">
+      {/* <div className="embla__controls">
         <div className="embla__buttons">
           <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
           <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
@@ -137,7 +136,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
             />
           ))}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
