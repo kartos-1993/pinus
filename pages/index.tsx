@@ -130,8 +130,8 @@ export default function Home() {
           <p className="text-xl font-sans text-center px-18 mt-10 font-thin px-4">
             Bask in the breathtaking views of rolling hills, lush pine forests,
             and distant snow-capped peaks, all from the comfort of your private
-            sanctuary. Let nature's splendor rejuvenate your spirit and soothe
-            your soul.
+            sanctuary. Let nature&rsquo;s splendor rejuvenate your spirit and
+            soothe your soul.
           </p>
         </section>
       </main>
