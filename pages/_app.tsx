@@ -7,6 +7,10 @@ import { AnimatePresence } from "framer-motion";
 import { Source_Sans_3, Cormorant_Garamond } from "next/font/google";
 import "../styles/embla.css";
 
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
 export const source_sans_3 = Source_Sans_3({
   subsets: ["latin"],
   weight: ["300", "400"],
