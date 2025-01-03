@@ -97,10 +97,10 @@ export default function Home() {
         {/**Hero section end */}
 
         <section className="py-20">
-          <h2 className="text-3xl text-center font-mono font-semibold mb-4">
+          <h2 className="text-4xl text-center font-mono font-semibold mb-4">
             Luxurious Suites
           </h2>
-          <p className="text-2xl font-mono text-center font-normal">
+          <p className="text-xl text-center font-normal">
             {/* Escape to our tranquil hotel surrounded by pine forests for a
             memorable nature retreat. Perfect for romantic getaways or family
             vacations. Unwind and immerse yourself in serene beauty. We cannot
