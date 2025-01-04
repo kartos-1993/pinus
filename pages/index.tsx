@@ -96,9 +96,9 @@ export default function Home() {
           </motion.div>
         </section>
         {/**Hero section end */}
-        {/**Hero section end */}
+        {/**Room section section start */}
 
-        <section className="py-20 bg-green-50 ">
+        <section className="py-20 px-6 bg-green-50 ">
           <h2 className="text-4xl text-center font-mono font-bold mb-4">
             Luxurious Suites
           </h2>
@@ -112,7 +112,7 @@ export default function Home() {
           </p>
           <div className="container mx-auto">
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-              <div className="flex flex-col rounded-lg shadow-lg font-sans">
+              <div className="flex flex-col rounded-lg shadow-lg font-sans bg-white">
                 <div className="h-64 rounded-t-lg bg-cover bg-center bg-[url('/1.jpg')]"></div>
                 <div className="p-8">
                   <h3 className="font-extrabold font-mono text-2xl mb-2">
@@ -120,13 +120,14 @@ export default function Home() {
                   </h3>
                   <ul className="flex flex-col gap-2 text-lg mb-4">
                     <li className="flex items-center gap-1">
-                      <Check size={15} /> Panoramic Mountain Views
+                      <Check size={15} color="#D97706" /> Panoramic Mountain
+                      Views
                     </li>
                     <li className="flex items-center gap-1">
-                      <Check size={15} /> Ultra-Clean Bathroom
+                      <Check size={15} color="#D97706" /> Ultra-Clean Bathroom
                     </li>
                     <li className="flex items-center gap-1">
-                      <Check size={15} /> Bathroom King Size Bed
+                      <Check size={15} color="#D97706" /> Bathroom King Size Bed
                     </li>
                   </ul>
                   <div className="flex justify-between">
@@ -136,14 +137,14 @@ export default function Home() {
                     </span>
                     <button
                       type="button"
-                      className="rounded-lg bg-amber-600 text-white py-2 px-6"
+                      className="rounded-lg bg-amber-600 text-white py-2 px-6 whitespace-nowrap"
                     >
                       Book Now
                     </button>
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col rounded-lg shadow-lg font-sans">
+              <div className="flex flex-col rounded-lg shadow-lg font-sans bg-white">
                 <div className="h-64 rounded-t-lg bg-cover bg-center bg-[url('/2.jpg')]"></div>
                 <div className="p-8">
                   <h3 className="font-extrabold font-mono text-2xl mb-2">
@@ -151,13 +152,14 @@ export default function Home() {
                   </h3>
                   <ul className="flex flex-col gap-2 text-lg mb-4">
                     <li className="flex items-center gap-1">
-                      <Check size={15} /> Panoramic Mountain Views
+                      <Check size={15} color="#D97706" /> Panoramic Mountain
+                      Views
                     </li>
                     <li className="flex items-center gap-1">
-                      <Check size={15} /> Ultra-Clean Bathroom
+                      <Check size={15} color="#D97706" /> Ultra-Clean Bathroom
                     </li>
                     <li className="flex items-center gap-1">
-                      <Check size={15} /> Bathroom King Size Bed
+                      <Check size={15} color="#D97706" /> Bathroom King Size Bed
                     </li>
                   </ul>
                   <div className="flex justify-between">
@@ -174,7 +176,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col rounded-lg shadow-lg font-sans">
+              <div className="flex flex-col rounded-lg shadow-lg font-sans bg-white">
                 <div className="h-64 rounded-t-lg bg-cover bg-center bg-[url('/3.jpg')]"></div>
                 <div className="p-8">
                   <h3 className="font-extrabold font-mono text-2xl mb-2">
@@ -182,13 +184,14 @@ export default function Home() {
                   </h3>
                   <ul className="flex flex-col gap-2 text-lg mb-4">
                     <li className="flex items-center gap-1">
-                      <Check size={15} /> Panoramic Mountain Views
+                      <Check size={15} color="#D97706" /> Panoramic Mountain
+                      Views
                     </li>
                     <li className="flex items-center gap-1">
-                      <Check size={15} /> Ultra-Clean Bathroom
+                      <Check size={15} color="#D97706" /> Ultra-Clean Bathroom
                     </li>
                     <li className="flex items-center gap-1">
-                      <Check size={15} /> Bathroom King Size Bed
+                      <Check size={15} color="#D97706" /> Bathroom King Size Bed
                     </li>
                   </ul>
                   <div className="flex justify-between">
@@ -208,6 +211,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+        {/**Room section section end */}
 
         <section className="grid gap-2">
           {/* <EmblaCarousel slides={introSlides} options={OPTIONS} /> */}
