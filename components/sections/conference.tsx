@@ -41,15 +41,15 @@ const Conference = () => {
         <div className="flex flex-col lg:flex-row lg:items-center gap-8">
           <div className="flex flex-col mx-auto gap-8">
             {conferenceFeatures.map((feature, index) => (
-              <div key={index} className="flex items-center gap-4">
-                <div className="mr-4 w-14 h-14 bg-green-100 flex items-center justify-center rounded-lg">
+              <div key={index} className="flex items-start gap-6">
+                <div className="w-[60px] h-[60px] shrink-0 bg-green-100 flex items-center justify-center rounded-lg">
                   {feature.icon}
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold font-mono mb-2">
+                  <h3 className="text-2xl font-semibold font-mono mb-2">
                     {feature.heading}
                   </h3>
-                  <p className="text-lg text-gray-600 font-sans">
+                  <p className="text-xl text-gray-600 font-sans">
                     {feature.subheading}
                   </p>
                 </div>
