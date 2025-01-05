@@ -13,12 +13,7 @@ import Header from "../components/Header";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
 
-import EmblaCarousel from "@/components/Carousel/Carousel";
 import { Check, IndianRupee, Star } from "lucide-react";
-
-const OPTIONS: EmblaOptionsType = {};
-const SLIDE_COUNT = 5;
-const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
 const introSlides = [
   { src: "/assets/slide/slide1.jpeg", alt: "Slide 1" },
