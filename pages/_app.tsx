@@ -13,7 +13,7 @@ import "swiper/css/navigation";
 
 export const source_sans_3 = Source_Sans_3({
   subsets: ["latin"],
-  weight: ["300", "400"],
+  weight: ["300", "400", "500"],
   variable: "--font-source_sans_3",
 });
 export const CormorantGaramond = Cormorant_Garamond({
