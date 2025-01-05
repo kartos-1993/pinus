@@ -14,6 +14,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
 
 import { Check, IndianRupee, Star } from "lucide-react";
+import Conference from "@/components/sections/conference";
 
 const introSlides = [
   { src: "/assets/slide/slide1.jpeg", alt: "Slide 1" },
@@ -345,6 +346,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <Conference />
         {/**Dining section  end */}
       </main>
 
