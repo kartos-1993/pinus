@@ -10,7 +10,6 @@ import heroImage from "../public/assets/hero.jpeg";
 import { CormorantGaramond, source_sans_3 } from "./_app";
 
 import Header from "../components/Header";
-import { EmblaOptionsType } from "embla-carousel";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
 
