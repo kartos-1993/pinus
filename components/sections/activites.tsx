@@ -5,7 +5,7 @@ const activities = [
   {
     name: "Hikinh To Rikeshwor Mandir",
     detail: "Guided trails for all experience levels with breathtaking views",
-    imgSrc: "/assets/activities/barbeque/fire-desktop.jpg",
+    imgSrc: "/assets/activities/hiking/hiking.jpg",
   },
   {
     name: "Evening BBQ",
@@ -16,7 +16,7 @@ const activities = [
   {
     name: "Live Fire",
     detail: "Keep you cozy and warm from the coll breeze of chill air",
-    imgSrc: "/assets/activities/hiking/hiking.jpg",
+    imgSrc: "/assets/activities/barbeque/fire-desktop.jpg",
   },
 ];
 const Activites = () => {
