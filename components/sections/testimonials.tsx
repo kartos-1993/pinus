@@ -76,7 +76,7 @@ interface TestimonialProps {
 
 const Card = ({ activeIndex }: { activeIndex: number }) => {
   return (
-    <div className=" bg-white shadow-lg rounded-lg py-8 mx-auto">
+    <div className=" bg-white shadow-lg rounded-lg py-8 ">
       <Image
         width={50}
         height={50}
