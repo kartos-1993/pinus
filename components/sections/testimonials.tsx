@@ -76,13 +76,13 @@ interface TestimonialProps {
 
 const Card = ({ activeIndex }: { activeIndex: number }) => {
   return (
-    <div className=" bg-white shadow-lg rounded-lg py-8 ">
+    <div className=" bg-white shadow-lg rounded-lg py-8">
       <Image
         width={50}
         height={50}
         alt="testimonials-profile"
         src={testimonials[activeIndex].profileImg}
-        className="mx-auto rounded-full mb-8"
+        className="mx-auto rounded-full mb-8 pt-4"
       />
 
       <div className="flex gap-2 justify-center mb-8 ">
@@ -120,18 +120,6 @@ const Testimonials = () => {
         <p className="text-xl font-sans text-center max-w-lg mx-auto mb-10">
           Discover what our guests have to say about their stay
         </p>
-
-        {/* {testimonials.map((testimonial, index) => (
-          <div key={index} className="">
-
-            <Image
-              width={40}
-              height={40}
-              alt="testimonials-profile"
-              src={testimonial.profileImg}
-            />
-          </div>
-        ))} */}
         <div className="relative">
           <button
             onClick={() => {
@@ -142,7 +130,7 @@ const Testimonials = () => {
             }}
             type="button"
             aria-label="Previous testimonial"
-            className="w-10 h-10 rounded-full bg-white shadow-md inline-flex items-center justify-center absolute -left-2 top-[50%] translate-y-[-50%]"
+            className="w-10 h-10 rounded-full bg-white shadow-md inline-flex items-center justify-center absolute -left-7 top-[50%] translate-y-[-50%]"
           >
             <ChevronLeft size={25} />
           </button>
@@ -155,24 +143,24 @@ const Testimonials = () => {
             }}
             type="button"
             aria-label="Previous testimonial"
-            className="w-10 h-10 rounded-full bg-white shadow-md inline-flex items-center justify-center absolute -right-10 top-[50%] translate-y-[-50%]"
+            className="w-10 h-10 rounded-full bg-white shadow-md inline-flex items-center justify-center absolute -right-8 top-[50%] translate-y-[-50%]"
           >
             <ChevronRight size={25} />
           </button>
           <Card activeIndex={activeIndex} />
-          <div className="flex justify-center gap-1 mt-10">
-            {testimonials.map((testimonial, index) => (
-              <button
-                type="button"
-                aria-label="active testimonial indicator"
-                key={index}
-                onClick={() => setActiveIndex(index)}
-                className={` ${
-                  index === activeIndex && "bg-green-400"
-                } h-3 w-3 rounded-full bg-green-200 mr-2 `}
-              />
-            ))}
-          </div>
+        </div>
+        <div className="flex justify-center gap-1">
+          {testimonials.map((testimonial, index) => (
+            <button
+              type="button"
+              aria-label="active testimonial indicator"
+              key={index}
+              onClick={() => setActiveIndex(index)}
+              className={` ${
+                index === activeIndex && "bg-green-400"
+              } h-3 w-3 rounded-full bg-green-200 mr-2 mt-10`}
+            />
+          ))}
         </div>
       </div>
     </section>
