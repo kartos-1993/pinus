@@ -112,7 +112,7 @@ const Testimonials = () => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
 
   return (
-    <section className="py-20 px-6 bg-green-50 mb-10">
+    <section className="py-20 px-6 bg-green-50 ">
       <div className="container mx-auto">
         <h3 className="text-4xl font-mono font-semibold text-center mb-6">
           Guest Experiences
@@ -143,7 +143,7 @@ const Testimonials = () => {
             }}
             type="button"
             aria-label="Previous testimonial"
-            className="w-10 h-10 rounded-full bg-white shadow-md inline-flex items-center justify-center absolute -right-8 top-[50%] translate-y-[-50%]"
+            className="w-10 h-10 rounded-full bg-white shadow-md inline-flex items-center justify-center absolute -right-6 top-[50%] translate-y-[-50%]"
           >
             <ChevronRight size={25} />
           </button>
