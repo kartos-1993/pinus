@@ -18,6 +18,7 @@ import Conference from "@/components/sections/conference";
 import Activites from "@/components/sections/activites";
 import Testimonials from "@/components/sections/testimonials";
 import Location from "@/components/sections/location";
+import Footer from "@/components/sections/footer";
 
 const introSlides = [
   { src: "/assets/slide/slide1.jpeg", alt: "Slide 1" },
@@ -354,9 +355,8 @@ export default function Home() {
         <Activites />
         <Testimonials />
         <Location />
+        <Footer />
       </main>
-
-      <footer className="footer"></footer>
     </>
   );
 }
