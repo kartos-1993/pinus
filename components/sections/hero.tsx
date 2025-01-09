@@ -12,7 +12,7 @@ const Hero = () => {
         // exit={{ x: "100%", scale: 0 }}
       ></motion.div>
       <motion.div
-        className="z-20 absolute text-left lg:text-center text-white text-3xl  md:text-5xl lg:text-6xl px-4 font-mono font-light "
+        className="z-10 absolute text-left lg:text-center text-white text-3xl  md:text-5xl lg:text-6xl px-4 font-mono font-light "
         initial={{ opacity: 0, top: "70%" }}
         animate={{ opacity: 1, top: "40%" }}
         // exit={{ opacity: 0, y: 100 }}

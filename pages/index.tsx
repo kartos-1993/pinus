@@ -38,7 +38,7 @@ export default function Home() {
         <meta name="theme-color" content="#ffffff"></meta>
       </Head>
       <main
-        className={`w-full h-screen overflow-x-hidden ${source_sans_3.variable} ${CormorantGaramond.variable}`}
+        className={`relative w-full h-screen overflow-x-hidden ${source_sans_3.variable} ${CormorantGaramond.variable}`}
       >
         <Header />
         <Hero />
