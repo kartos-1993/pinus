@@ -57,7 +57,10 @@ const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <nav>
-      <p onClick={() => setIsOpen(!isOpen)} className="cursor-pointer ">
+      <p
+        onClick={() => setIsOpen(!isOpen)}
+        className="cursor-pointer font-sans text-white"
+      >
         Menu
       </p>
       <AnimatePresence>
