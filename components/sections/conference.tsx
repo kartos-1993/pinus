@@ -69,26 +69,17 @@ const Conference = () => {
             >
               <SwiperSlide>
                 <Image
-                  src="/assets/slide/slide1.jpeg"
+                  src="/assets/conference/slide1.jpg"
                   alt="dining1"
                   width={600}
                   height={500}
                 />
-                {/* <img src="/assets/slide/slide1.jpeg" alt="dining1" /> */}
+                {/* <img src="/assets/slide/slide1.jpg" alt="dining1" /> */}
               </SwiperSlide>
               <SwiperSlide>
                 {" "}
                 <Image
-                  src="/assets/slide/slide2.jpeg"
-                  alt="dining1"
-                  width={600}
-                  height={500}
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                {" "}
-                <Image
-                  src="/assets/slide/slide3.jpeg"
+                  src="/assets/conference/slide2.jpg"
                   alt="dining1"
                   width={600}
                   height={500}
@@ -97,7 +88,7 @@ const Conference = () => {
               <SwiperSlide>
                 {" "}
                 <Image
-                  src="/assets/slide/slide4.jpeg"
+                  src="/assets/conference/slide3.jpg"
                   alt="dining1"
                   width={600}
                   height={500}
@@ -106,7 +97,16 @@ const Conference = () => {
               <SwiperSlide>
                 {" "}
                 <Image
-                  src="/assets/slide/slide5.jpeg"
+                  src="/assets/conference/slide4.jpg"
+                  alt="dining1"
+                  width={600}
+                  height={500}
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                {" "}
+                <Image
+                  src="/assets/conference/slide5.jpg"
                   alt="dining1"
                   width={600}
                   height={500}
