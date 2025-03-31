@@ -7,6 +7,8 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import React, { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation } from "swiper/modules";
 
 const testimonials = [
   {
@@ -21,7 +23,7 @@ const testimonials = [
     profileImg: "/assets/testimonials/2.png",
     star: 4,
     review:
-      "Peaceful and beautiful place with clean and better rooms. Just little insects in the room but overall good stay with good food!!",
+      "Peaceful and beautiful place with clean and better room and overall good stay with good food!!",
   },
   {
     name: "Nabaraj Karki",
@@ -71,38 +73,37 @@ interface TestimonialProps {
   profileImg: string;
   star: number;
   review: string;
-  activeIndex: number;
 }
 
-const Card = ({ activeIndex }: { activeIndex: number }) => {
+const Card = (testimonial: TestimonialProps) => {
   return (
-    <div className=" bg-white shadow-lg rounded-lg py-8">
-      <Image
-        width={50}
-        height={50}
-        alt="testimonials-profile"
-        src={testimonials[activeIndex].profileImg}
-        className="mx-auto rounded-full mb-8 pt-4"
-      />
+    <div className=" bg-white shadow-sm rounded-lg py-10">
+      <div className="w-28 h-28 mx-auto mb-4">
+        <Image
+          width={20}
+          height={20}
+          alt="testimonial profile picture"
+          src={testimonial.profileImg}
+          className="mx-auto mb-8 pt-4 w-4 rounded-full"
+        />
+      </div>
 
       <div className="flex gap-2 justify-center mb-8 ">
-        {Array.from({ length: testimonials[activeIndex].star }).map(
-          (_, index) => (
-            <Star
-              key={index}
-              size={20}
-              fill="#FBD167"
-              strokeWidth={0}
-              className="inline"
-            />
-          )
-        )}
+        {Array.from({ length: testimonial.star }).map((_, index) => (
+          <Star
+            key={index}
+            size={20}
+            fill="#FBD167"
+            strokeWidth={0}
+            className="inline"
+          />
+        ))}
       </div>
       <p className="text-center text-lg font-sans px-4 text-gray-600 mb-6">
-        &quot;{testimonials[activeIndex].review}&quot;
+        &quot;{testimonial.review}&quot;
       </p>
       <h4 className="text-center text-xl font-mono font-semibold">
-        {testimonials[activeIndex].name}
+        {testimonial.name}
       </h4>
     </div>
   );
@@ -112,7 +113,7 @@ const Testimonials = () => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
 
   return (
-    <section className="py-20 px-6 bg-green-50 ">
+    <section className="py-20 px-6 ">
       <div className="container mx-auto">
         <h3 className="text-4xl font-mono font-semibold text-center mb-6">
           Guest Experiences
@@ -120,7 +121,7 @@ const Testimonials = () => {
         <p className="text-xl font-sans text-center max-w-lg mx-auto mb-10">
           Discover what our guests have to say about their stay
         </p>
-        <div className="relative">
+        {/* <div className="relative">
           <button
             onClick={() => {
               setActiveIndex((prev) => {
@@ -161,7 +162,20 @@ const Testimonials = () => {
               } h-3 w-3 rounded-full bg-green-200 mr-2 mt-10`}
             />
           ))}
-        </div>
+        </div> */}
+        <Swiper
+          pagination={{
+            dynamicBullets: true,
+          }}
+          modules={[Pagination, Navigation]}
+          className="mySwiper"
+        >
+          {testimonials.map((testimonial, index) => (
+            <SwiperSlide key={index}>
+              <Card {...testimonial} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </section>
   );

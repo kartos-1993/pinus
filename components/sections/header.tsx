@@ -19,7 +19,7 @@ const Header = () => {
     >
       <Image
         className="w-12"
-        src="/assets/logo.png"
+        src="/assets/logo.svg"
         alt="logo"
         priority={true}
         width={20}
@@ -91,7 +91,7 @@ const NavBar = () => {
 };
 
 function NavLink({ title, link }: INavLinkProps) {
-  const navKinkVariant = {
+  const navLinkVariant = {
     initial: {
       scaleY: 0,
     },

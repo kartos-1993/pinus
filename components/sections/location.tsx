@@ -3,7 +3,7 @@ import React from "react";
 
 const Location = () => {
   return (
-    <section className="py-20 px-6">
+    <section className="py-20 px-6 bg-green-50 ">
       <div className="mx-auto container">
         <div className="text-center mb-8">
           <h2 className="text-4xl font-mono font-semibold mb-6">
@@ -16,7 +16,7 @@ const Location = () => {
         </div>
         <div className="grid lg:grid-cols-2 gap-4">
           <div className=" ">
-            <div className="mb-10 bg-green-50 px-6 py-8  rounded-xl">
+            <div className="mb-10 bg-white px-6 py-8  rounded-xl shadow-md">
               <h3 className="text-semibold font-semibold font-sans mb-6 text-xl">
                 Quick Distance Guide
               </h3>

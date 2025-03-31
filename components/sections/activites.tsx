@@ -21,7 +21,7 @@ const activities = [
 ];
 const Activites = () => {
   return (
-    <div className="px-6 py-20">
+    <div className="px-6 py-20 bg-green-50">
       <div className="container mx-auto ">
         <h3 className="text-center text-4xl font-mono font-semibold mb-8">
           Adventure & Relaxation

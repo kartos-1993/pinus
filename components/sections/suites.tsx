@@ -3,7 +3,7 @@ import { Check, IndianRupee } from "lucide-react";
 
 const Suites = () => {
   return (
-    <section className="py-20 px-6 bg-green-50 ">
+    <section className="py-20 px-6 bg-green-50">
       <div className="container mx-auto">
         <h2 className="text-4xl text-center font-mono font-bold mb-4">
           Luxurious Suites
