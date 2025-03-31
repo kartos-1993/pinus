@@ -22,8 +22,8 @@ const Header = () => {
         src="/assets/logo.png"
         alt="logo"
         priority={true}
-        width={50}
-        height={50}
+        width={20}
+        height={20}
       />
 
       <NavBar />

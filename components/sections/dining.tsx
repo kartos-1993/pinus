@@ -16,8 +16,13 @@ const Dining = () => {
               Fine Dining Excellence
             </h2>
             <h6 className="font-sans flex items-center gap-2 mb-6">
-              <Star fill="#FBD167" strokeWidth={0} size={20} />
-              <Star fill="#FBD167" strokeWidth={0} size={20} />
+              <Image
+                alt="two star awarded for cleanliness"
+                src="/assets/dining/award.gif"
+                width={30}
+                height={30}
+              />
+
               <span className="text-xl font-medium ">
                 2-Star Cleanliness Award
               </span>
