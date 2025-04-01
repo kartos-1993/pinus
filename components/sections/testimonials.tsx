@@ -78,13 +78,12 @@ interface TestimonialProps {
 const Card = (testimonial: TestimonialProps) => {
   return (
     <div className=" bg-white shadow-sm rounded-lg py-10">
-      <div className="w-28 h-28 mx-auto mb-4">
+      <div className="w-28 h-28 mx-auto">
         <Image
-          width={20}
-          height={20}
+          fill
           alt="testimonial profile picture"
           src={testimonial.profileImg}
-          className="mx-auto mb-8 pt-4 w-4 rounded-full"
+          className="pt-4 w-4 rounded-full"
         />
       </div>
 
@@ -121,48 +120,7 @@ const Testimonials = () => {
         <p className="text-xl font-sans text-center max-w-lg mx-auto mb-10">
           Discover what our guests have to say about their stay
         </p>
-        {/* <div className="relative">
-          <button
-            onClick={() => {
-              setActiveIndex((prev) => {
-                if (prev === 0) return testimonials.length - 1;
-                return prev - 1;
-              });
-            }}
-            type="button"
-            aria-label="Previous testimonial"
-            className="w-10 h-10 rounded-full bg-white shadow-md inline-flex items-center justify-center absolute -left-7 top-[50%] translate-y-[-50%]"
-          >
-            <ChevronLeft size={25} />
-          </button>
-          <button
-            onClick={() => {
-              setActiveIndex((prev) => {
-                if (prev === testimonials.length - 1) return 0;
-                return prev + 1;
-              });
-            }}
-            type="button"
-            aria-label="Previous testimonial"
-            className="w-10 h-10 rounded-full bg-white shadow-md inline-flex items-center justify-center absolute -right-6 top-[50%] translate-y-[-50%]"
-          >
-            <ChevronRight size={25} />
-          </button>
-          <Card activeIndex={activeIndex} />
-        </div>
-        <div className="flex justify-center gap-1">
-          {testimonials.map((testimonial, index) => (
-            <button
-              type="button"
-              aria-label="active testimonial indicator"
-              key={index}
-              onClick={() => setActiveIndex(index)}
-              className={` ${
-                index === activeIndex && "bg-green-400"
-              } h-3 w-3 rounded-full bg-green-200 mr-2 mt-10`}
-            />
-          ))}
-        </div> */}
+
         <Swiper
           pagination={{
             dynamicBullets: true,

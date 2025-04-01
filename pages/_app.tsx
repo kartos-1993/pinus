@@ -5,22 +5,27 @@ import Script from "next/script";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 import { AnimatePresence } from "framer-motion";
-import { Source_Sans_3, Cormorant_Garamond } from "next/font/google";
+import {
+  Source_Sans_3,
+  Cormorant_Garamond,
+  Marcellus,
+  Jost,
+} from "next/font/google";
 import "../styles/embla.css";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-export const source_sans_3 = Source_Sans_3({
+export const source_sans_3 = Jost({
   subsets: ["latin"],
   weight: ["300", "400", "500"],
   variable: "--font-source_sans_3",
 });
 
-export const CormorantGaramond = Cormorant_Garamond({
+export const CormorantGaramond = Marcellus({
   subsets: ["latin"],
   style: "normal",
-  weight: ["300", "400"],
+  weight: ["400"],
   variable: "--font-comorant_garamond",
 });
 
