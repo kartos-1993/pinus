@@ -10,16 +10,16 @@ const Hero = () => {
         className="h-full w-full bg-white z-10 absolute"
         initial={{ scale: 2 }}
         animate={{ x: "100%", scale: 1 }}
-        transition={{ duration: 1.8, ease: "easeInOut" }}
+        transition={{ duration: 1, ease: "easeInOut" }}
       />
 
       {/* Text animation */}
       <motion.div
         className="z-20 absolute text-center lg:text-center text-white text-4xl md:text-5xl lg:text-6xl px-4 font-mono font-medium w-full"
         style={{ top: "40%" }}
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 2.5, ease: "easeInOut", delay: 0.5 }}
+        initial={{ opacity: 0, y: 200, scale: 0.5 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        transition={{ duration: 1, ease: "easeInOut", delay: 0.5 }}
       >
         A Serene Escape in the Heart of Nature
       </motion.div>

@@ -11,48 +11,56 @@ interface INavLinkProps {
 
 type NavProps = {
   isOpen: boolean;
-  setIsOpen: () => void;
+  setIsOpen: (isOPen: boolean) => void;
 };
 
 export function Navigation({ isOpen, setIsOpen }: NavProps) {
+  const [isVisible, setIsVisible] = useState(true);
   const { scrollY } = useScroll();
-  const [hidden, setHidden] = useState(false);
+  const [prevScrollY, setPrevScrollY] = useState(0);
 
   useEffect(() => {
-    scrollY.get;
-    const latest = scrollY.onChange(() => {
-      const current = scrollY.get();
-      if (current > 0) {
-        // Check if the user is scrolling down
-        setHidden(true); // Hide the navbar
+    return scrollY.onChange((currentScrollY) => {
+      if (currentScrollY > 100 && currentScrollY > prevScrollY) {
+        setIsVisible(false);
       } else {
-        // Check if the user is scrolling up
-        setHidden(false); // Show the navbar
+        setIsVisible(true);
       }
+      setPrevScrollY(currentScrollY);
     });
-    console.log(latest);
-  }, [scrollY]);
+  }, [scrollY, prevScrollY]);
 
   return (
     <motion.nav
       variants={{
-        visible: { y: 0 },
-        hidden: { y: "-100%" },
+        visible: {
+          y: 0,
+          transition: {
+            duration: 0.3,
+            ease: "easeInOut",
+          },
+        },
+        hidden: {
+          y: "-100%",
+          transition: {
+            duration: 0.5,
+            ease: "easeInOut",
+          },
+        },
       }}
-      animate={hidden ? "hidden" : "visible"}
-      transition={{ duration: 0.2, ease: "easeInOut" }}
-      className=" backdrop-blur-md fixed top-0 w-full justify-between items-center z-20 px-6 py-3"
+      initial="visible"
+      animate={isVisible ? "visible" : "hidden"}
+      className="fixed top-0 w-full justify-between items-center z-20 px-4 py-3 backdrop-blur-lg"
     >
       <div className="container mx-auto flex justify-between items-center">
         <Image
-          className="w-12"
+          className="-ml-1.5"
           src="/assets/logo.svg"
           alt="logo"
           priority={true}
-          width={20}
-          height={20}
+          width={50}
+          height={50}
         />
-
         <NavBar isOpen={isOpen} setIsOpen={setIsOpen} />
       </div>
     </motion.nav>
