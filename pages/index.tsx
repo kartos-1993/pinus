@@ -9,7 +9,7 @@ import heroImage from "../public/assets/hero.jpeg";
 
 import { CormorantGaramond, source_sans_3 } from "./_app";
 
-import Navigation from "@/components/sections/header";
+import Header from "@/components/sections/header";
 import Hero from "@/components/sections/hero";
 import Suites from "@/components/sections/suites";
 import Dining from "@/components/sections/dining";
@@ -39,11 +39,13 @@ export default function Home() {
         <meta name="theme-color" content="#ffffff"></meta>
       </Head>
       <main
-        className={`${isOpen ? "overflow-hidden" : ""}  w-full h-screen  ${
-          source_sans_3.variable
-        } ${CormorantGaramond.variable}`}
+        className={` relative ${
+          isOpen ? "overflow-hidden" : ""
+        }  w-full h-screen  ${source_sans_3.variable} ${
+          CormorantGaramond.variable
+        }`}
       >
-        <Navigation isOpen={isOpen} setIsOpen={setIsOpen} />
+        <Header isOpen={isOpen} setIsOpen={setIsOpen} />
         <Hero />
         <Dining />
         <Suites />

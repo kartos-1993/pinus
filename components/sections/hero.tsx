@@ -15,7 +15,7 @@ const Hero = () => {
 
       {/* Text animation */}
       <motion.div
-        className="z-20 absolute text-center lg:text-center text-white text-4xl md:text-5xl lg:text-6xl px-4 font-mono font-medium w-full"
+        className="z-10 absolute text-center lg:text-center text-white text-4xl md:text-5xl lg:text-6xl px-4 font-mono font-medium w-full"
         style={{ top: "40%" }}
         initial={{ opacity: 0, y: 200, scale: 0.5 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
