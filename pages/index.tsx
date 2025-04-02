@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 import Link from "next/link";
@@ -9,7 +9,7 @@ import heroImage from "../public/assets/hero.jpeg";
 
 import { CormorantGaramond, source_sans_3 } from "./_app";
 
-import Header from "@/components/sections/header";
+import Navigation from "@/components/sections/header";
 import Hero from "@/components/sections/hero";
 import Suites from "@/components/sections/suites";
 import Dining from "@/components/sections/dining";
@@ -20,6 +20,7 @@ import Location from "@/components/sections/location";
 import Footer from "@/components/sections/footer";
 
 export default function Home() {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <>
       <Head>
@@ -38,9 +39,11 @@ export default function Home() {
         <meta name="theme-color" content="#ffffff"></meta>
       </Head>
       <main
-        className={`relative w-full h-screen overflow-x-hidden ${source_sans_3.variable} ${CormorantGaramond.variable}`}
+        className={`${isOpen ? "overflow-hidden" : ""}  w-full h-screen  ${
+          source_sans_3.variable
+        } ${CormorantGaramond.variable}`}
       >
-        <Header />
+        <Navigation isOpen={isOpen} setIsOpen={setIsOpen} />
         <Hero />
         <Dining />
         <Suites />

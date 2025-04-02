@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import React, { useState, useEffect } from "react";
+import { AnimatePresence, motion, useScroll } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { exit } from "process";
@@ -8,32 +8,58 @@ interface INavLinkProps {
   title: string;
   link: string;
 }
-const Header = () => {
-  return (
-    <motion.header
-      className="absolute bg-transparent z-20 w-full px-6 py-3 flex justify-between items-center"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ y: -50, opacity: 0 }}
-      transition={{ duration: 3, ease: "easeInOut" }}
-    >
-      <Image
-        className="w-12"
-        src="/assets/logo.svg"
-        alt="logo"
-        priority={true}
-        width={20}
-        height={20}
-      />
 
-      <NavBar />
-    </motion.header>
-  );
+type NavProps = {
+  isOpen: boolean;
+  setIsOpen: () => void;
 };
 
-export default Header;
+export function Navigation({ isOpen, setIsOpen }: NavProps) {
+  const { scrollY } = useScroll();
+  const [hidden, setHidden] = useState(false);
 
-const NavBar = () => {
+  useEffect(() => {
+    scrollY.get;
+    const latest = scrollY.onChange(() => {
+      const current = scrollY.get();
+      if (current > 0) {
+        // Check if the user is scrolling down
+        setHidden(true); // Hide the navbar
+      } else {
+        // Check if the user is scrolling up
+        setHidden(false); // Show the navbar
+      }
+    });
+    console.log(latest);
+  }, [scrollY]);
+
+  return (
+    <motion.nav
+      variants={{
+        visible: { y: 0 },
+        hidden: { y: "-100%" },
+      }}
+      animate={hidden ? "hidden" : "visible"}
+      transition={{ duration: 0.2, ease: "easeInOut" }}
+      className=" backdrop-blur-md fixed top-0 w-full justify-between items-center z-20 px-6 py-3"
+    >
+      <div className="container mx-auto flex justify-between items-center">
+        <Image
+          className="w-12"
+          src="/assets/logo.svg"
+          alt="logo"
+          priority={true}
+          width={20}
+          height={20}
+        />
+
+        <NavBar isOpen={isOpen} setIsOpen={setIsOpen} />
+      </div>
+    </motion.nav>
+  );
+}
+
+const NavBar = ({ isOpen, setIsOpen }: NavProps) => {
   const menuVariant = {
     initial: {
       scaleY: 0,
@@ -54,7 +80,6 @@ const NavBar = () => {
     },
   };
 
-  const [isOpen, setIsOpen] = useState(false);
   return (
     <nav>
       <p
@@ -135,3 +160,5 @@ const navLinks = [
     link: "#location",
   },
 ];
+
+export default Navigation;
