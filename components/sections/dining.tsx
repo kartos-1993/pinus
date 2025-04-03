@@ -1,14 +1,15 @@
-import React from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
 
 import { Check, Star } from "lucide-react";
+import { useScroll } from "framer-motion";
 
 const Dining = () => {
   return (
-    <section className="py-20 px-6 bg-white ">
+    <section className="py-20 px-6 bg-white">
       <div className="container mx-auto ">
         <div className="flex flex-col lg:flex-row lg:gap-8 gap-10 mb-6">
           <div className=" lg:w-1/2">

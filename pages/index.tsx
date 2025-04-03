@@ -10,6 +10,7 @@ import Activites from "@/components/sections/activites";
 import Testimonials from "@/components/sections/testimonials";
 import Location from "@/components/sections/location";
 import Footer from "@/components/sections/footer";
+import Welcome from "@/components/sections/welcome";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -94,6 +95,7 @@ export default function Home() {
       >
         <Header isOpen={isOpen} setIsOpen={setIsOpen} />
         <Hero />
+        <Welcome />
         <Dining />
         <Suites />
         <Conference />
