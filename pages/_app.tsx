@@ -3,15 +3,10 @@ import "../styles/globals.css";
 import { AppProps } from "next/app";
 import Script from "next/script";
 import { useEffect } from "react";
-import { useRouter } from "next/router";
 import { AnimatePresence } from "framer-motion";
-import {
-  Source_Sans_3,
-  Cormorant_Garamond,
-  Marcellus,
-  Jost,
-} from "next/font/google";
-import "../styles/embla.css";
+import { Marcellus, Jost } from "next/font/google";
+import Head from "next/head";
+
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -47,7 +42,15 @@ function MyApp({ Component, pageProps, router }: AppProps) {
 
   return (
     <>
-      {/* Google Analytics Script */}
+      {/* Global Head - Only non-page-specific tags */}
+      <Head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="theme-color" content="#ffffff" />
+      </Head>
+
+      {/* Google Analytics */}
       <Script
         strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}

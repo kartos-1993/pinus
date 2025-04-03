@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect, useRef, useLayoutEffect } from "react";
-import { AnimatePresence, motion, useScroll } from "framer-motion";
+import { AnimatePresence, motion, useScroll, Variants } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
