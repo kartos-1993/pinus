@@ -2,6 +2,8 @@ import { useScroll, motion } from "framer-motion";
 import Image from "next/image";
 import React, { useRef } from "react";
 import AnimatedSection from "../animated-section";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation } from "swiper/modules";
 
 const Welcome = () => {
   return (
@@ -14,14 +16,63 @@ const Welcome = () => {
           <p className="text-xl font-sans mb-8 text-center">
             Your Nature Retreat Awaits!
           </p>
-          <div className=" flex flex-col gap-8">
-            <Image
-              alt="two star awarded for cleanliness"
-              src="/assets/welcome/slide1.jpeg"
-              width={450}
-              height={500}
-              style={{ width: "100%", height: "auto" }}
-            />
+          <div className="w-full [500px] h-[450px] lg:w-1/2 ">
+            <Swiper
+              slidesPerView={1}
+              spaceBetween={30}
+              loop={true}
+              pagination={{
+                clickable: true,
+              }}
+              modules={[Pagination, Navigation]}
+              className="mySwiper"
+            >
+              <SwiperSlide>
+                <Image
+                  src="/assets/welcome/slide1.jpeg"
+                  alt="dining1"
+                  width={600}
+                  height={500}
+                />
+                {/* <img src="/assets/slide/slide1.jpeg" alt="dining1" /> */}
+              </SwiperSlide>
+              <SwiperSlide>
+                {" "}
+                <Image
+                  src="/assets/welcome/slide2.webp"
+                  alt="dining1"
+                  width={600}
+                  height={500}
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                {" "}
+                <Image
+                  src="/assets/welcome/slide3.jpeg"
+                  alt="dining1"
+                  width={600}
+                  height={500}
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                {" "}
+                <Image
+                  src="/assets/welcome/slide4.jpeg"
+                  alt="dining1"
+                  width={600}
+                  height={500}
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                {" "}
+                <Image
+                  src="/assets/slide/slide5.jpeg"
+                  alt="dining1"
+                  width={600}
+                  height={500}
+                />
+              </SwiperSlide>
+            </Swiper>
           </div>
         </div>
       </section>
