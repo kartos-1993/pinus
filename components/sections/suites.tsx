@@ -151,44 +151,45 @@ function RoomCard({
   icon: React.ElementType;
 }) {
   return (
-   
-      <div className="flex flex-col rounded-lg shadow-lg font-sans bg-white">
-        <div
-          className={`h-64 rounded-t-lg bg-cover bg-center`}
-          style={{ backgroundImage: `url(${image})` }}
-        />
-        <div className="p-8">
-          <h3 className="text-xl font-semibold text-gray-800 font-mono">
-            {title}
-          </h3>
-          <ul className="flex flex-col gap-2 text-lg mb-4">
-            {features.map((feature, index) => {
-              const FeatureIcon = feature.icon;
-              return (
-                <AnimatedSection key={index}>
-                  <li key={index} className="flex items-center gap-1">
-                    <FeatureIcon
-                      className="w-5 h-5 text-pine-500"
-                      color="#D97706"
-                      size={15}
-                    />
-                    {feature.text}
-                  </li>
-                </AnimatedSection>
-              );
-            })}
-          </ul>
-          <div className="flex justify-end">
-            <button
-              type="button"
-              className="rounded-lg bg-amber-600 text-white py-2 px-6 whitespace-nowrap"
-            >
-              Book Now
-            </button>
-          </div>
+    <div className="flex flex-col rounded-lg shadow-lg font-sans bg-white">
+      <div
+        className={`h-64 rounded-t-lg bg-cover bg-center`}
+        style={{ backgroundImage: `url(${image})` }}
+      />
+      <div className="p-8">
+        <h3 className="text-2xl font-semibold text-gray-800 font-mono mb-4">
+          {title}
+        </h3>
+        <ul className="flex flex-col gap-2 ml-2 mb-4 min-h-[120px]">
+          {features.map((feature, index) => {
+            const FeatureIcon = feature.icon;
+            return (
+              <AnimatedSection key={index}>
+                <li
+                  key={index}
+                  className="flex items-center gap-2 font-regular"
+                >
+                  <FeatureIcon
+                    className="w-5 h-5 text-pine-500"
+                    color="#D97706"
+                    size={15}
+                  />
+                  {feature.text}
+                </li>
+              </AnimatedSection>
+            );
+          })}
+        </ul>
+        <div className="flex justify-end">
+          <button
+            type="button"
+            className="rounded-lg bg-amber-600 text-white py-2 px-6 whitespace-nowrap"
+          >
+            Book Now
+          </button>
         </div>
       </div>
-   
+    </div>
   );
 }
 
@@ -200,10 +201,10 @@ function Suites() {
       features: [
         { text: "Spacious Double Bed", icon: Bed },
         { text: "Clean Attached Bathroom", icon: Bath },
-        { text: "Daily Breakfast Included", icon: Coffee },
-        { text: "24/7 Room Service", icon: Clock },
+        { text: "Breakfast Included", icon: Coffee },
+        { text: "Wifi", icon: Wifi },
       ],
-      image: "assets/suites/slide1.jpeg",
+      image: "assets/suites/slide6.jpg",
       icon: Home,
     },
     {
@@ -211,11 +212,10 @@ function Suites() {
       price: 1500,
       features: [
         { text: "Comfortable Single Bed", icon: Bed },
-        { text: "Modern Attached Bathroom", icon: Bath },
-        { text: "Work Desk", icon: LampDesk },
-        { text: "Daily Housekeeping", icon: Clock },
+        { text: "Attached Bathroom", icon: Bath },
+        { text: "Wifi", icon: Wifi },
       ],
-      image: "assets/suites/slide3.jpg",
+      image: "assets/suites/slide7.jpg",
       icon: Home,
     },
     {
@@ -225,9 +225,9 @@ function Suites() {
         { text: "Suitable for 14 People", icon: Users2 },
         { text: "All Meals Included", icon: Utensils },
         { text: "Spacious Common Area", icon: Home },
-        { text: "Group Activities Support", icon: CalendarClock },
+        { text: "Wifi", icon: Wifi },
       ],
-      image: "assets/suites/slide4.jpg",
+      image: "assets/suites/slide8.jpg",
       icon: Users,
     },
   ];

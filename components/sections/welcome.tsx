@@ -10,10 +10,10 @@ const Welcome = () => {
     <section className="py-16 px-6">
       <div className="container mx-auto ">
         <AnimatedSection>
-          <h2 className="text-3xl font-bold font-mono mb-4 text-center">
+          <h2 className="text-4xl font-bold font-mono mb-4 text-center">
             Welcome to Pinus Hotel
           </h2>
-          <p className="text-xl font-sans mb-8 text-center">
+          <p className="text-xl text-center font-sans font-light mb-12 max-w-2xl mx-auto">
             Your Nature Retreat Awaits!
           </p>
         </AnimatedSection>
