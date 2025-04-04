@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import AnimatedSection from "../animated-section";
 
 const activities = [
   {
@@ -21,19 +22,21 @@ const activities = [
 ];
 const Activites = () => {
   return (
-    <div className="px-6 py-20 bg-green-50">
+    <div className="px-6 py-20 bg-white">
       <div className="container mx-auto ">
-        <h3 className="text-center text-4xl font-mono font-semibold mb-8">
-          Adventure & Relaxation
-        </h3>
-        <p className="text-lg font-sans text-center max-w-lg mx-auto mb-10">
-          Immerse yourself in nature with our curated outdoor activities and
-          evening entertainment
-        </p>
+        <AnimatedSection>
+          <h3 className="text-center text-4xl font-mono font-semibold mb-8">
+            Adventure & Relaxation
+          </h3>
+          <p className="text-lg font-sans text-center max-w-lg mx-auto mb-10">
+            Immerse yourself in nature with our curated outdoor activities and
+            evening entertainment
+          </p>
+        </AnimatedSection>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {activities.map((ativity, index) => (
             <div
-              className="flex flex-col h-64 font-sans text-xl relative rounded-xl bg-cover bg-center opacity-80 bg-gradient-to-b from-gray-400 to-green-900"
+              className="flex flex-col h-80 font-sans text-xl relative rounded-xl bg-cover bg-center opacity-80 bg-gradient-to-b from-gray-400 to-green-900"
               key={index}
             >
               <Image
@@ -44,8 +47,10 @@ const Activites = () => {
                 alt="activities"
               />
               <div className="px-8 bottom-[18%] absolute z-10 text-white flex flex-col gap-2 [text-shadow:_6px_5px_10px_rgba(131,131,131,0.43)]">
-                <h4 className="text-2xl font-normal">{ativity.name}</h4>
-                <p className="text-base text-white ">{ativity.detail}</p>
+                <AnimatedSection>
+                  <h4 className="text-2xl font-normal">{ativity.name}</h4>
+                  <p className="text-base text-white ">{ativity.detail}</p>
+                </AnimatedSection>
               </div>
             </div>
           ))}

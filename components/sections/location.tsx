@@ -3,7 +3,7 @@ import React from "react";
 
 const Location = () => {
   return (
-    <section className="py-20 px-6 bg-green-50 ">
+    <section className="py-20 px-6 bg-white ">
       <div className="mx-auto container">
         <div className="text-center mb-8">
           <h2 className="text-4xl font-mono font-semibold mb-6">
@@ -16,8 +16,8 @@ const Location = () => {
         </div>
         <div className="grid lg:grid-cols-2 gap-4">
           <div className=" ">
-            <div className="mb-10 bg-white px-6 py-8  rounded-xl shadow-md">
-              <h3 className="text-semibold font-semibold font-sans mb-6 text-xl">
+            <div className="mb-10 bg-green-50 px-6 py-8  rounded-xl shadow-md">
+              <h3 className="text-semibold font-bregular font-sans mb-6 text-xl">
                 Quick Distance Guide
               </h3>
               <div className="flex gap-4 font-sans mb-6">
@@ -25,10 +25,10 @@ const Location = () => {
                   <MapPinIcon size={24} color="grey" className=" shrink-0" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold">
+                  <h4 className="text-lg font-medium">
                     40 km from Capital City
                   </h4>
-                  <p className="text-base">45 Minutes Drive</p>
+                  <p className="text-sm">45 Minutes Drive</p>
                 </div>
               </div>
 
@@ -37,10 +37,8 @@ const Location = () => {
                   <ImagePlay size={24} color="grey" className=" shrink-0" />
                 </div>
                 <div>
-                  <h4 className="text-lg  font-semibold">Scenic Journey</h4>
-                  <p className="text-base">
-                    Enjoy stunning views along the way
-                  </p>
+                  <h4 className="text-lg font-[500]">Scenic Journey</h4>
+                  <p className="text-sm">Enjoy stunning views along the way</p>
                 </div>
               </div>
 
@@ -49,8 +47,8 @@ const Location = () => {
                   <Briefcase size={24} color="grey" className=" shrink-0" />
                 </div>
                 <div>
-                  <h4 className="text-lg  font-semibold">Shuttle Service</h4>
-                  <p className="text-base">
+                  <h4 className="text-lg font-medium">Shuttle Service</h4>
+                  <p className="text-sm">
                     Vehicles available for your convenience
                   </p>
                 </div>

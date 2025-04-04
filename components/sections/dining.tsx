@@ -19,7 +19,7 @@ const Dining = () => {
                 Fine Dining Excellence
               </h2>
 
-              <h6 className="font-sans flex items-center gap-2 mb-6">
+              <h6 className="font-sans flex justify-center items-center gap-2 mb-6">
                 <Image
                   alt="two star awarded for cleanliness"
                   src="/assets/dining/award.gif"
@@ -27,7 +27,7 @@ const Dining = () => {
                   height={30}
                 />
 
-                <span className="text-xl font-medium ">
+                <span className="text-xl text-center font-medium ">
                   2-Star Cleanliness Award
                 </span>
               </h6>
@@ -87,12 +87,6 @@ const Dining = () => {
                 </div>
               </div>
             </div>
-            <button
-              type="button"
-              className="bg-amber-600 py-2 px-8 rounded-lg text-white text-lg font-normal font-sans"
-            >
-              Visit menu
-            </button>
           </div>
           <div className="w-full [500px] h-[450px] lg:w-1/2 ">
             <Swiper

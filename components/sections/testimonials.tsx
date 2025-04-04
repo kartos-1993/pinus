@@ -5,10 +5,10 @@ import {
   MoveLeft,
   Star,
 } from "lucide-react";
-import Image from "next/image";
+
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper/modules";
+import { Pagination } from "swiper/modules";
 
 const testimonials = [
   {
@@ -77,15 +77,11 @@ interface TestimonialProps {
 
 const Card = (testimonial: TestimonialProps) => {
   return (
-    <div className=" bg-white shadow-sm rounded-lg py-10">
-      <div className="w-28 h-28 mx-auto">
-        <Image
-          fill
-          alt="testimonial profile picture"
-          src={testimonial.profileImg}
-          className="pt-4 w-4 rounded-full"
-        />
-      </div>
+    <div className=" shadow-sm py-10 bg-url">
+      <div
+        className="w-20 h-20 mx-auto bg-no-repeat bg-center"
+        style={{ backgroundImage: `url(${testimonial.profileImg})` }}
+      ></div>
 
       <div className="flex gap-2 justify-center mb-8 ">
         {Array.from({ length: testimonial.star }).map((_, index) => (
@@ -98,7 +94,7 @@ const Card = (testimonial: TestimonialProps) => {
           />
         ))}
       </div>
-      <p className="text-center text-lg font-sans px-4 text-gray-600 mb-6">
+      <p className=" min-w-min text-center text-lg font-sans px-6 text-gray-600 mb-6 ">
         &quot;{testimonial.review}&quot;
       </p>
       <h4 className="text-center text-xl font-mono font-semibold">
@@ -112,7 +108,7 @@ const Testimonials = () => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
 
   return (
-    <section className="py-20 px-6 ">
+    <section className="py-20 px-6 bg-green-50 ">
       <div className="container mx-auto">
         <h3 className="text-4xl font-mono font-semibold text-center mb-6">
           Guest Experiences
@@ -125,7 +121,7 @@ const Testimonials = () => {
           pagination={{
             dynamicBullets: true,
           }}
-          modules={[Pagination, Navigation]}
+          modules={[Pagination]}
           className="mySwiper"
         >
           {testimonials.map((testimonial, index) => (

@@ -29,7 +29,7 @@ const conferenceFeatures = [
 
 const Conference = () => {
   return (
-    <div className="bg-white px-4 py-20">
+    <div className="bg-green-50 px-4 py-20">
       <div className="container mx-auto">
         <h2 className="text-4xl font-mono font-semibold text-center mb-6">
           State-of-the-Art Conference Facilities
@@ -46,10 +46,10 @@ const Conference = () => {
                   {feature.icon}
                 </div>
                 <div>
-                  <h3 className="text-2xl font-semibold font-mono mb-2">
+                  <h3 className="text-xl font-semibold font-mono mb-2">
                     {feature.heading}
                   </h3>
-                  <p className="text-xl text-gray-600 font-sans">
+                  <p className=" text-lg font-thin text-gray-600 font-sans">
                     {feature.subheading}
                   </p>
                 </div>
