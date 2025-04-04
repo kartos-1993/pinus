@@ -237,7 +237,7 @@ function Suites() {
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <AnimatedSection>
-            <h2 className="text-4xl text-center font-mono font-bold mb-4">
+            <h2 className="text-3xl text-center font-mono font-bold mb-4">
               Our Room Packages
             </h2>
             <p className="text-xl text-center font-sans font-light mb-12 max-w-2xl mx-auto">

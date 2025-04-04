@@ -52,27 +52,27 @@ const AnimatedSection = ({
   };
 
   return (
+    // <motion.div
+    //   ref={ref}
+    //   style={{
+    //     scale,
+    //     opacity,
+    //     y,
+    //   }}
+    // >
     <motion.div
-      ref={ref}
-      style={{
-        scale,
-        opacity,
-        y,
-      }}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: animateOnce, margin: "0px 0px -50px 0px" }}
+      variants={container}
     >
-      <motion.div
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: animateOnce, margin: "0px 0px -50px 0px" }}
-        variants={container}
-      >
-        {React.Children.map(children, (child, index) => (
-          <motion.div key={index} variants={item}>
-            {child}
-          </motion.div>
-        ))}
-      </motion.div>
+      {React.Children.map(children, (child, index) => (
+        <motion.div key={index} variants={item}>
+          {child}
+        </motion.div>
+      ))}
     </motion.div>
+    // </motion.div>
   );
 };
 
