@@ -1,37 +1,42 @@
-import React from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
 
 import { Check, Star } from "lucide-react";
+import { useScroll } from "framer-motion";
+import AnimatedSection from "../animated-section";
 
 const Dining = () => {
   return (
-    <section className="py-20 px-6 bg-white ">
+    <section className="py-20 px-6 bg-white">
       <div className="container mx-auto ">
         <div className="flex flex-col lg:flex-row lg:gap-8 gap-10 mb-6">
           <div className=" lg:w-1/2">
-            <h2 className="text-4xl font-bold font-mono mb-4">
-              Fine Dining Excellence
-            </h2>
-            <h6 className="font-sans flex items-center gap-2 mb-6">
-              <Image
-                alt="two star awarded for cleanliness"
-                src="/assets/dining/award.gif"
-                width={30}
-                height={30}
-              />
+            <AnimatedSection>
+              <h2 className="text-4xl font-bold font-mono mb-4">
+                Fine Dining Excellence
+              </h2>
 
-              <span className="text-xl font-medium ">
-                2-Star Cleanliness Award
-              </span>
-            </h6>
-            <p className="text-xl font-sans mb-8">
-              Experience culinary excellence in our award-winning restaurant,
-              where every dish is crafted with passion and served in an
-              immaculate environment.
-            </p>
+              <h6 className="font-sans flex items-center gap-2 mb-6">
+                <Image
+                  alt="two star awarded for cleanliness"
+                  src="/assets/dining/award.gif"
+                  width={30}
+                  height={30}
+                />
+
+                <span className="text-xl font-medium ">
+                  2-Star Cleanliness Award
+                </span>
+              </h6>
+              <p className="text-xl font-sans mb-8">
+                Experience culinary excellence in our award-winning restaurant,
+                where every dish is crafted with passion and served in an
+                immaculate environment.
+              </p>
+            </AnimatedSection>
             <div className="grid grid-cols-2 gap-6 mb-10">
               <div className="flex gap-4 items-start">
                 <Check
@@ -102,7 +107,7 @@ const Dining = () => {
             >
               <SwiperSlide>
                 <Image
-                  src="/assets/slide/slide1.jpeg"
+                  src="/assets/dining/slide1.jpg"
                   alt="dining1"
                   width={600}
                   height={500}
@@ -112,7 +117,7 @@ const Dining = () => {
               <SwiperSlide>
                 {" "}
                 <Image
-                  src="/assets/slide/slide2.jpeg"
+                  src="/assets/dining/slide2.jpg"
                   alt="dining1"
                   width={600}
                   height={500}
@@ -121,7 +126,7 @@ const Dining = () => {
               <SwiperSlide>
                 {" "}
                 <Image
-                  src="/assets/slide/slide3.jpeg"
+                  src="/assets/dining/slide3.jpg"
                   alt="dining1"
                   width={600}
                   height={500}
@@ -130,7 +135,7 @@ const Dining = () => {
               <SwiperSlide>
                 {" "}
                 <Image
-                  src="/assets/slide/slide4.jpeg"
+                  src="/assets/dining/slide4.jpeg"
                   alt="dining1"
                   width={600}
                   height={500}
@@ -139,7 +144,16 @@ const Dining = () => {
               <SwiperSlide>
                 {" "}
                 <Image
-                  src="/assets/slide/slide5.jpeg"
+                  src="/assets/dining/slide5.jpg"
+                  alt="dining1"
+                  width={600}
+                  height={500}
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                {" "}
+                <Image
+                  src="/assets/dining/slide6.jpg"
                   alt="dining1"
                   width={600}
                   height={500}
