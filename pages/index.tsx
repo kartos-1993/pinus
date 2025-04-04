@@ -96,8 +96,8 @@ export default function Home() {
         <Header isOpen={isOpen} setIsOpen={setIsOpen} />
         <Hero />
         <Welcome />
-        <Dining />
         <Suites />
+        <Dining />
         <Conference />
         <Activites />
         <Testimonials />

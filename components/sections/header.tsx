@@ -45,9 +45,15 @@ const navVariants = {
   },
 };
 
-const Navigation = () => (
+interface NavigationProps {
+  isNavOpen: boolean;
+}
+
+const Navigation = ({ isNavOpen }: NavigationProps) => (
   <motion.ul
-    className=" list-none absolute right-0 w-full flex flex-col items-center uppercase text-4xl font-sans font-medium leading-[1.5] mt-10"
+    className={`${
+      isNavOpen ? "block" : "hidden"
+    } list-none absolute right-0 w-full flex flex-col items-center uppercase text-4xl font-sans font-medium leading-[1.5] mt-10`}
     variants={navVariants}
   >
     {navLinks.map((item, index) => (
@@ -116,10 +122,10 @@ export function Header({ isOpen, setIsOpen }: NavProps) {
               className=""
             >
               <motion.div
-                className="bg-white absolute top-0 right-0 bottom-0 w-full h-screen "
+                className="bg-white absolute top-0 right-0 bottom-0 w-full h-screen"
                 variants={sidebarVariants}
               />
-              <Navigation />
+              <Navigation isNavOpen={isOpen} />
               <MenuToggle toggle={() => setIsOpen(!isOpen)} />
             </motion.nav>
           </div>

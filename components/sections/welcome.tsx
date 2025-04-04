@@ -7,34 +7,30 @@ import { Pagination, Navigation } from "swiper/modules";
 
 const Welcome = () => {
   return (
-    <AnimatedSection>
-      <section className="py-20 px-6">
-        <div className="container mx-auto ">
+    <section className="py-16 px-6">
+      <div className="container mx-auto ">
+        <AnimatedSection>
           <h2 className="text-3xl font-bold font-mono mb-4 text-center">
             Welcome to Pinus Hotel
           </h2>
           <p className="text-xl font-sans mb-8 text-center">
             Your Nature Retreat Awaits!
           </p>
-          <div className="w-full [500px] h-[450px] lg:w-1/2 ">
+        </AnimatedSection>
+        <AnimatedSection>
+          <div className="w-full h-[450px] lg:w-1/2 ">
             <Swiper
               slidesPerView={1}
               spaceBetween={30}
               loop={true}
               pagination={{
-                clickable: true,
+                dynamicBullets: true,
               }}
               modules={[Pagination, Navigation]}
               className="mySwiper"
             >
               <SwiperSlide>
-                <Image
-                  src="/assets/welcome/slide1.jpeg"
-                  alt="dining1"
-                  width={600}
-                  height={500}
-                />
-                {/* <img src="/assets/slide/slide1.jpeg" alt="dining1" /> */}
+                <Image src="/assets/welcome/slide1.jpeg" alt="dining1" fill />
               </SwiperSlide>
               <SwiperSlide>
                 {" "}
@@ -74,9 +70,9 @@ const Welcome = () => {
               </SwiperSlide>
             </Swiper>
           </div>
-        </div>
-      </section>
-    </AnimatedSection>
+        </AnimatedSection>
+      </div>
+    </section>
   );
 };
 
