@@ -17,7 +17,7 @@ const Location = () => {
         <div className="grid lg:grid-cols-2 gap-4">
           <div className=" ">
             <div className="mb-10 bg-green-50 px-6 py-8  rounded-xl shadow-md">
-              <h3 className="text-semibold font-bregular font-sans mb-6 text-xl">
+              <h3 className="font-regular font-sans mb-6 text-xl">
                 Quick Distance Guide
               </h3>
               <div className="flex gap-4 font-sans mb-6">
@@ -55,7 +55,7 @@ const Location = () => {
               </div>
             </div>
             <div className="bg-green-50 px-6 py-8 rounded-xl">
-              <h3 className="text-semibold font-semibold font-sans mb-6 text-xl">
+              <h3 className="font-normal font-sans mb-6 text-xl">
                 Contact Information
               </h3>
               <div className="flex gap-2 font-sans items-center mb-2">
@@ -64,7 +64,7 @@ const Location = () => {
               </div>
               <div className="flex gap-4 items-center font-sans mb-2">
                 📞
-                <p className="text-lg"> +9779843165309 </p>
+                <p className="text-lg"> +9779855088360 </p>
               </div>
               <div className="flex gap-4 items-center font-sans mb-2">
                 📧

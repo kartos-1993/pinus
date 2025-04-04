@@ -53,6 +53,7 @@ const AnimatedSection = ({
 
   return (
     <motion.div
+      viewport={{ once: animateOnce, margin: "0px 0px -50px 0px" }}
       ref={ref}
       style={{
         scale,
