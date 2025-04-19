@@ -9,7 +9,9 @@ import { MessageCircleMore } from "lucide-react";
 // Floating WhatsApp Button Component
 const FloatingWhatsAppButton = () => {
   const phone = "9779855088360"; // Nepal country code +977
-  const message = encodeURIComponent("Hello, I would like to inquire about Pinus Hotel.");
+  const message = encodeURIComponent(
+    "Hello, I would like to inquire about Pinus Hotel."
+  );
   const whatsappUrl = `https://wa.me/${phone}?text=${message}`;
 
   return (
@@ -39,7 +41,7 @@ const Welcome = () => {
           </p>
         </AnimatedSection>
         <AnimatedSection>
-          <div className="w-full h-[450px] lg:w-1/2 mx-auto">
+          <div className="w-full h-[450px] lg:h-[600px] lg:w-3/4 mx-auto">
             <Swiper
               slidesPerView={1}
               spaceBetween={30}
