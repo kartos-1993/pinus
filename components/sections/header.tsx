@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect, useRef, useLayoutEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { AnimatePresence, motion, useScroll, Variants } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -265,7 +265,7 @@ const useDimensions = (ref: React.RefObject<HTMLDivElement | null>) => {
     height: null,
   });
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const updateDimensions = () => {
       if (ref.current) {
         setDimensions({

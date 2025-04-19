@@ -45,7 +45,7 @@ const Conference = () => {
         </h2>
         <p className="text-xl text-center font-sans font-light mx-auto max-w-lg mb-10">
           Host your next event in our fully equipped conference center, perfect
-          for gatherings of up to 200 people
+          for gatherings.
         </p>
         <div className="flex flex-col lg:flex-row lg:items-center gap-8">
           <AnimatedSection>

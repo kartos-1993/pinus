@@ -26,9 +26,20 @@ const Location = () => {
                 </div>
                 <div>
                   <h4 className="text-lg font-medium">
-                    40 km from Capital City
+                    40 km from Capital City through Chitlang
                   </h4>
-                  <p className="text-sm">45 Minutes Drive</p>
+                  <p className="text-sm">1 Hour 45 Minutes Drive</p>
+                </div>
+              </div>
+              <div className="flex gap-4 font-sans mb-6">
+                <div className="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center">
+                  <MapPinIcon size={24} color="grey" className=" shrink-0" />
+                </div>
+                <div>
+                  <h4 className="text-lg font-medium">
+                    40 km from Capital City through Chitlang
+                  </h4>
+                  <p className="text-sm">1 Hour 45 Minutes Drive</p>
                 </div>
               </div>
 
