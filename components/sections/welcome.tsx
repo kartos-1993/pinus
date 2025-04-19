@@ -4,6 +4,27 @@ import React, { useRef } from "react";
 import AnimatedSection from "../animated-section";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
+import { MessageCircleMore } from "lucide-react";
+
+// Floating WhatsApp Button Component
+const FloatingWhatsAppButton = () => {
+  const phone = "9779855088360"; // Nepal country code +977
+  const message = encodeURIComponent("Hello, I would like to inquire about Pinus Hotel.");
+  const whatsappUrl = `https://wa.me/${phone}?text=${message}`;
+
+  return (
+    <a
+      href={whatsappUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Chat on WhatsApp"
+      className="fixed z-50 bottom-6 right-6 bg-green-500 hover:bg-green-600 rounded-full shadow-lg p-4 flex items-center justify-center transition-colors"
+      style={{ boxShadow: "0 4px 16px rgba(0,0,0,0.15)" }}
+    >
+      <MessageCircleMore size={32} color="#fff" />
+    </a>
+  );
+};
 
 const Welcome = () => {
   return (
@@ -63,6 +84,7 @@ const Welcome = () => {
           </div>
         </AnimatedSection>
       </div>
+      <FloatingWhatsAppButton />
     </section>
   );
 };
