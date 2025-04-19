@@ -14,7 +14,7 @@ const Dining = () => {
       <div className="container mx-auto ">
         <div className="flex flex-col lg:flex-row lg:gap-8 gap-10 mb-6">
           <div className=" lg:w-1/2">
-            <AnimatedSection>
+            <AnimatedSection staggerChildren={0.15}>
               <h2 className="text-3xl font-bold font-mono mb-4 text-center">
                 Fine Dining Excellence
               </h2>
@@ -26,7 +26,6 @@ const Dining = () => {
                   width={30}
                   height={30}
                 />
-
                 <span className="text-xl text-center font-medium ">
                   2-Star Cleanliness Award
                 </span>
@@ -147,7 +146,7 @@ const Dining = () => {
               <SwiperSlide>
                 {" "}
                 <Image
-                  src="/assets/dining/slide6.jpg"
+                  src="/assets/dining/slide6.jpeg"
                   alt="dining1"
                   width={600}
                   height={500}
