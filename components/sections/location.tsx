@@ -79,7 +79,7 @@ const Location = () => {
               </div>
               <div className="flex gap-4 items-center font-sans mb-2">
                 📧
-                <p className="text-lg">abishek.asim@gmail.com </p>
+                <p className="text-lg">pinushotel.nepal@gmail.com </p>
               </div>
             </div>
           </div>
