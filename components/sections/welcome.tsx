@@ -18,7 +18,7 @@ const Welcome = () => {
           </p>
         </AnimatedSection>
         <AnimatedSection>
-          <div className="w-full h-[450px] lg:w-1/2 ">
+          <div className="w-full h-[450px] lg:w-1/2 mx-auto">
             <Swiper
               slidesPerView={1}
               spaceBetween={30}
@@ -30,12 +30,12 @@ const Welcome = () => {
               className="mySwiper"
             >
               <SwiperSlide>
-                <Image src="/assets/welcome/slide1.jpeg" alt="dining1" fill />
+                <Image src="/assets/welcome/slide1.webp" alt="dining1" fill />
               </SwiperSlide>
               <SwiperSlide>
                 {" "}
                 <Image
-                  src="/assets/welcome/slide2.webp"
+                  src="/assets/welcome/slide2.jpeg"
                   alt="dining1"
                   width={600}
                   height={500}
@@ -53,16 +53,7 @@ const Welcome = () => {
               <SwiperSlide>
                 {" "}
                 <Image
-                  src="/assets/welcome/slide4.jpeg"
-                  alt="dining1"
-                  width={600}
-                  height={500}
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                {" "}
-                <Image
-                  src="/assets/slide/slide5.jpeg"
+                  src="/assets/welcome/slide5.webp"
                   alt="dining1"
                   width={600}
                   height={500}
