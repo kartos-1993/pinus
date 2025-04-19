@@ -45,8 +45,12 @@ export default function Home() {
         <title>Pinus Hotel | Luxury Stay in Daman</title>
         <meta
           name="description"
-          content="Premium hospitality with scenic views."
+          content="Luxury hotel in Daman with scenic views and premium amenities. Book your stay for a memorable experience."
         />
+        <link rel="canonical" href="https://www.pinushotel.com.np/" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <meta name="theme-color" content="#14532d" />
 
         {/* OpenGraph / Facebook */}
         <meta

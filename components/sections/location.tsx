@@ -91,6 +91,7 @@ const Location = () => {
               title="map"
               className="h-[400px] lg:h-full w-full border-0"
               src="https://www.google.com/maps/embed/v1/directions?origin=kathmandu&destination=daman+pinus+hotel&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+              loading="lazy"
             ></iframe>
           </div>
         </div>
