@@ -37,11 +37,11 @@ function RoomCard({
     <AnimatedSection>
       <div className="flex flex-col rounded-lg shadow-lg font-sans bg-white">
         <div
-          className={`h-64 rounded-t-lg bg-cover bg-center`}
+          className={`h-64 lg:h-40 rounded-t-lg bg-cover bg-center`}
           style={{ backgroundImage: `url(${image})` }}
         />
         <div className="p-8">
-          <h3 className="text-2xl font-semibold text-gray-800 font-mono mb-4">
+          <h3 className="text-2xl lg:text-xl font-semibold text-gray-800 font-mono mb-4">
             {title}
           </h3>
           <ul className="flex flex-col gap-2 ml-2 mb-4 min-h-[120px]">
@@ -63,7 +63,7 @@ function RoomCard({
             })}
           </ul>
           <div className="flex justify-between items-center">
-            <h1 className="text-[#D97706] text-2xl font-semibold">
+            <h1 className="text-[#D97706] text-xl font-semibold">
               Nrs. {price}
             </h1>
 
@@ -117,6 +117,18 @@ function Suites() {
       image: "assets/suites/slide8.jpg",
       icon: Users,
     },
+    {
+      title: "Large Group Package",
+      price: 1800,
+      features: [
+        { text: "Suitable for 28 People", icon: Users2 },
+        { text: "All Meals Included", icon: Utensils },
+        { text: "Spacious Common Area", icon: Home },
+        { text: "Wifi", icon: Wifi },
+      ],
+      image: "assets/suites/slide8.jpg",
+      icon: Users,
+    },
   ];
 
   return (
@@ -134,7 +146,7 @@ function Suites() {
           </AnimatedSection>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {rooms.map((room, index) => (
             <RoomCard key={index} {...room} />
           ))}
