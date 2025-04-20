@@ -67,12 +67,14 @@ function RoomCard({
               Nrs. {price}
             </h1>
 
-            <button
-              type="button"
-              className="rounded-lg bg-amber-600 text-white py-2 px-6 whitespace-nowrap"
+            <a
+              href="https://wa.me/9779855088360"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-lg bg-amber-600 text-white py-2 px-6 whitespace-nowrap flex items-center justify-center"
             >
               Book Now
-            </button>
+            </a>
           </div>
         </div>
       </div>
