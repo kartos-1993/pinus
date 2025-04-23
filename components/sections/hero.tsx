@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <section className="h-screen flex relative overflow-hidden">
+    <section id="hero" className="h-screen flex relative overflow-hidden">
       {/* White overlay animation */}
       <motion.div
         className="h-full w-full bg-white z-10 absolute"

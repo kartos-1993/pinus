@@ -30,7 +30,7 @@ const FloatingWhatsAppButton = () => {
 
 const Welcome = () => {
   return (
-    <section className="py-16 px-6">
+    <section id="welcome" className="py-16 px-6">
       <div className="container mx-auto ">
         <AnimatedSection>
           <h2 className="text-4xl font-bold font-mono mb-4 text-center">

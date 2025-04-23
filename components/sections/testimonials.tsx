@@ -108,7 +108,7 @@ const Testimonials = () => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
 
   return (
-    <section className="py-20 px-6 bg-green-50 ">
+    <section id="testimonials" className="py-20 px-6 bg-green-50 ">
       <div className="container mx-auto">
         <h3 className="text-4xl font-mono font-semibold text-center mb-6">
           Guest Experiences

@@ -3,7 +3,7 @@ import React from "react";
 
 const Location = () => {
   return (
-    <section className="py-20 px-6 bg-white ">
+    <section id="location" className="py-20 px-6 bg-white ">
       <div className="mx-auto container">
         <div className="text-center mb-8">
           <h2 className="text-4xl font-mono font-semibold mb-6">
@@ -79,7 +79,7 @@ const Location = () => {
               </div>
               <div className="flex gap-4 items-center font-sans mb-2">
                 📧
-                <p className="text-lg">pinushotel.nepal@gmail.com </p>
+                <p className="text-lg">pinushotel.nepal@gmail.com</p>
               </div>
             </div>
           </div>

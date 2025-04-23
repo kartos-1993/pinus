@@ -37,9 +37,9 @@ export const Sidebar = () => {
       // custom={height}
       ref={containerRef}
     >
-   <motion.div className="w-full h-full bg-white" variants={sidebar} />
-   <Navigation />
+      <motion.div className="w-full h-full bg-white" variants={sidebar} />
+      <Navigation />
       <MenuToggle toggle={() => toggleOpen()} />
- </motion.nav>
+    </motion.nav>
   );
 };

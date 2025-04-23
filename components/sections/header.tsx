@@ -208,7 +208,6 @@ type MenuProps = {
 };
 
 const MenuItem = ({ title, link }: MenuProps) => {
-  // const border = `2px solid ${colors[i]}`;
   return (
     <motion.li
       className=""
@@ -216,7 +215,17 @@ const MenuItem = ({ title, link }: MenuProps) => {
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
     >
-      <a className="" href={link}>
+      <a
+        className=""
+        href={link}
+        onClick={(e) => {
+          e.preventDefault();
+          const element = document.querySelector(link);
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+          }
+        }}
+      >
         {title}
       </a>
     </motion.li>
@@ -226,23 +235,23 @@ const MenuItem = ({ title, link }: MenuProps) => {
 const navLinks = [
   {
     id: 1,
-    title: "Homes",
-    link: "#testimonials",
+    title: "Home",
+    link: "#welcome",
   },
   {
     id: 2,
-    title: "Packages",
-    link: "#testimonials",
+    title: "Suites",
+    link: "#suites",
   },
   {
     id: 3,
     title: "Dining",
-    link: "#testimonials",
+    link: "#dining",
   },
   {
     id: 4,
     title: "Activities",
-    link: "#testimonials",
+    link: "#activities",
   },
   {
     id: 5,

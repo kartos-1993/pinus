@@ -10,7 +10,7 @@ import AnimatedSection from "../animated-section";
 
 const Dining = () => {
   return (
-    <section className="py-20 px-6 bg-white">
+    <section id="dining" className="py-20 px-6 bg-white">
       <div className="container mx-auto ">
         <div className="flex flex-col lg:flex-row lg:gap-8 gap-10 mb-6">
           <div className=" lg:w-1/2">

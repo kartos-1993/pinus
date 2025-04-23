@@ -38,7 +38,7 @@ const conferenceData = [
 
 const Conference = () => {
   return (
-    <div className="bg-green-50 px-4 py-20">
+    <section id="conference" className="bg-green-50 px-4 py-20">
       <div className="container mx-auto">
         <h2 className="text-4xl font-mono font-semibold text-center mb-6">
           State-of-the-Art Conference Facilities
@@ -97,7 +97,7 @@ const Conference = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

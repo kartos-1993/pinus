@@ -22,7 +22,7 @@ const activities = [
 ];
 const Activites = () => {
   return (
-    <div className="px-6 py-20 bg-white">
+    <section id="activities" className="px-6 py-20 bg-white">
       <div className="container mx-auto ">
         <AnimatedSection>
           <h3 className="text-center text-4xl font-mono font-semibold mb-8">
@@ -56,7 +56,7 @@ const Activites = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -86,7 +86,7 @@ function Suites() {
   const rooms = [
     {
       title: "Double Bedroom Deluxe",
-      price: 2000,
+      price: 2200,
       features: [
         { text: "Spacious Double Bed", icon: Bed },
         { text: "Clean Attached Bathroom", icon: Bath },
@@ -98,7 +98,7 @@ function Suites() {
     },
     {
       title: "Single Bedroom Comfort",
-      price: 1500,
+      price: 2000,
       features: [
         { text: "Comfortable Single Bed", icon: Bed },
         { text: "Attached Bathroom", icon: Bath },
@@ -109,7 +109,7 @@ function Suites() {
     },
     {
       title: "Group Package Special",
-      price: 2000,
+      price: 2200,
       features: [
         { text: "Suitable for 14 People", icon: Users2 },
         { text: "All Meals Included", icon: Utensils },
@@ -121,7 +121,7 @@ function Suites() {
     },
     {
       title: "Large Group Package",
-      price: 1800,
+      price: 2000,
       features: [
         { text: "Suitable for 28 People", icon: Users2 },
         { text: "All Meals Included", icon: Utensils },
@@ -134,7 +134,7 @@ function Suites() {
   ];
 
   return (
-    <section className="py-20 px-6 bg-green-50">
+    <section id="suites" className="py-20 px-6 bg-green-50">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <AnimatedSection>

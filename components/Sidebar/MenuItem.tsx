@@ -18,22 +18,22 @@ const variants = {
   },
 };
 
-const colors = ["#FF008C", "#D309E1", "#9C1AFF", "#7700FF", "#4400FF"];
+type MenuItemProps = {
+  title: string;
+  href: string;
+};
 
-interface MenuItemProps {
-  i: number;
-}
-
-export const MenuItem: React.FC<MenuItemProps> = ({ i }) => {
-  const style = { border: `2px solid ${colors[i]}` };
+export const MenuItem: React.FC<MenuItemProps> = ({
+  title,
+  href,
+}: MenuItemProps) => {
   return (
     <motion.li
       variants={variants}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
     >
-      <div className="icon-placeholder" style={style} />
-      <div className="text-placeholder" style={style} />
+      <a href={href}>{title}</a>
     </motion.li>
   );
 };
