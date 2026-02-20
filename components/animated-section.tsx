@@ -1,71 +1,74 @@
-import { motion } from "framer-motion";
-import React, { useRef, ReactNode } from "react";
+"use client";
 
-type ScrollOffset =
-  | `${number} ${number}`
-  | `${number}`
-  | "start"
-  | "end"
-  | "center";
+import { motion, useInView, Variants } from "framer-motion";
+import React, { useRef, ReactNode } from "react";
 
 interface AnimatedSectionProps {
   children: ReactNode;
-  offsetStart?: ScrollOffset;
-  offsetEnd?: ScrollOffset;
-  staggerChildren?: number; // Delay between children animations in seconds
-  animateOnce?: boolean; // Whether to animate only once
+  className?: string; // Additional classes for styling
+  delay?: number; // Delay before animation starts (in seconds)
+  direction?: "up" | "down" | "left" | "right" | "none"; // Animation direction
+  amount?: "some" | "all" | number; // Viewport amount to trigger (0 to 1)
+  once?: boolean; // Whether to animate only once
+  duration?: number; // Animation duration
+  staggerChildren?: number; // Delay between children animations
 }
 
 const AnimatedSection = ({
   children,
-  staggerChildren = 0.1,
-  animateOnce = true,
+  className = "",
+  delay = 0,
+  direction = "up", // Default slide up
+  amount = 0.3,
+  once = true,
+  duration = 0.8,
+  staggerChildren = 0,
 }: AnimatedSectionProps) => {
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { amount, once, margin: "-100px" });
 
-  // Stagger animation for children
-  const container = {
-    hidden: { opacity: 0, scale: 0.95, y: 20 },
-    show: {
-      opacity: 1,
-      scale: 1,
-      y: 0,
-      transition: {
-        staggerChildren: staggerChildren,
-        when: "beforeChildren",
-        duration: 0.8,
-        ease: [0.22, 1, 0.36, 1], // cubic-bezier for smoothness
-      },
-    },
+  const getHiddenVariant = () => {
+    switch (direction) {
+      case "up":
+        return { y: 60, opacity: 0 };
+      case "down":
+        return { y: -60, opacity: 0 };
+      case "left":
+        return { x: 60, opacity: 0 };
+      case "right":
+        return { x: -60, opacity: 0 };
+      case "none":
+        return { scale: 0.95, opacity: 0 };
+      default:
+        return { y: 60, opacity: 0 };
+    }
   };
 
-  const item = {
-    hidden: { opacity: 0, y: 40, scale: 0.98 },
-    show: {
+  const variants: Variants = {
+    hidden: getHiddenVariant(),
+    visible: {
       opacity: 1,
       y: 0,
+      x: 0,
       scale: 1,
       transition: {
-        duration: 0.7,
-        ease: [0.22, 1, 0.36, 1],
+        duration: duration,
+        ease: [0.22, 1, 0.36, 1], // Custom cubic-bezier for "luxurious" feel
+        delay: delay,
+        staggerChildren: staggerChildren > 0 ? staggerChildren : undefined,
       },
     },
   };
 
   return (
     <motion.div
-      viewport={{ once: animateOnce, margin: "0px 0px -50px 0px" }}
       ref={ref}
       initial="hidden"
-      whileInView="show"
-      variants={container}
-      style={{}}
+      animate={isInView ? "visible" : "hidden"}
+      variants={variants}
+      className={className}
     >
-      {React.Children.map(children, (child, index) => (
-        <motion.div key={index} variants={item}>
-          {child}
-        </motion.div>
-      ))}
+      {children}
     </motion.div>
   );
 };
