@@ -31,10 +31,10 @@ export default function Footer() {
             <h3 className="text-semibold font-semibold mb-3 text-xl">
               Quick Links
             </h3>
-            <Link href="#">Rooms & Suites </Link>
-            <Link href="#">Dining </Link>
-            <Link href="#">Activities </Link>
-            <Link href="#">Location </Link>
+            <Link href="#suites">Rooms & Suites </Link>
+            <Link href="#dining">Dining </Link>
+            <Link href="#activities">Activities </Link>
+            <Link href="#location">Location </Link>
           </div>
           <div className="font-sans">
             <h3 className="text-semibold font-semibold mb-3 text-xl">

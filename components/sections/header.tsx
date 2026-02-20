@@ -47,9 +47,10 @@ const navVariants = {
 
 interface NavigationProps {
   isNavOpen: boolean;
+  onItemClick: () => void;
 }
 
-const Navigation = ({ isNavOpen }: NavigationProps) => (
+const Navigation = ({ isNavOpen, onItemClick }: NavigationProps) => (
   <motion.ul
     className={`${
       isNavOpen ? "block" : "hidden"
@@ -57,7 +58,7 @@ const Navigation = ({ isNavOpen }: NavigationProps) => (
     variants={navVariants}
   >
     {navLinks.map((item, index) => (
-      <MenuItem {...item} key={index} />
+      <MenuItem {...item} onClick={onItemClick} key={index} />
     ))}
   </motion.ul>
 );
@@ -125,7 +126,7 @@ export function Header({ isOpen, setIsOpen }: NavProps) {
                 className="bg-white absolute top-0 right-0 bottom-0 w-full h-screen"
                 variants={sidebarVariants}
               />
-              <Navigation isNavOpen={isOpen} />
+              <Navigation isNavOpen={isOpen} onItemClick={() => setIsOpen(false)} />
               <MenuToggle toggle={() => setIsOpen(!isOpen)} />
             </motion.nav>
           </div>
@@ -205,9 +206,10 @@ const colors = ["#FF008C", "#D309E1", "#9C1AFF", "#7700FF", "#4400FF"];
 type MenuProps = {
   link: string;
   title: string;
+  onClick: () => void;
 };
 
-const MenuItem = ({ title, link }: MenuProps) => {
+const MenuItem = ({ title, link, onClick }: MenuProps) => {
   return (
     <motion.li
       className=""
@@ -215,17 +217,7 @@ const MenuItem = ({ title, link }: MenuProps) => {
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
     >
-      <a
-        className=""
-        href={link}
-        onClick={(e) => {
-          e.preventDefault();
-          const element = document.querySelector(link);
-          if (element) {
-            element.scrollIntoView({ behavior: "smooth" });
-          }
-        }}
-      >
+      <a className="" href={link} onClick={onClick}>
         {title}
       </a>
     </motion.li>
@@ -236,7 +228,7 @@ const navLinks = [
   {
     id: 1,
     title: "Home",
-    link: "#welcome",
+    link: "#hero",
   },
   {
     id: 2,

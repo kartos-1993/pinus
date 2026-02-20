@@ -122,7 +122,7 @@ const Testimonials = () => {
             dynamicBullets: true,
           }}
           modules={[Pagination]}
-          className="mySwiper"
+          className="mySwiper mySwiper--testimonials"
         >
           {testimonials.map((testimonial, index) => (
             <SwiperSlide key={index}>

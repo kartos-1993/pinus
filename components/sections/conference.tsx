@@ -81,7 +81,7 @@ const Conference = () => {
                 clickable: true,
               }}
               modules={[Pagination, Navigation]}
-              className="mySwiper"
+              className="mySwiper mySwiper--conference"
             >
               {conferenceData.map((item, index) => (
                 <SwiperSlide key={index}>

@@ -96,7 +96,7 @@ const Dining = () => {
                 clickable: true,
               }}
               modules={[Pagination, Navigation]}
-              className="mySwiper"
+              className="mySwiper mySwiper--dining"
             >
               <SwiperSlide>
                 <Image

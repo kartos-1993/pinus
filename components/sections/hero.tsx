@@ -58,7 +58,7 @@ const Hero = () => {
         {/* Mobile Image */}
         <div className="md:hidden w-full h-full relative">
           <Image
-            src="/image-mobile.png"
+            src="/image-mobile.jpg"
             alt="Serene nature escape"
             fill
             priority
