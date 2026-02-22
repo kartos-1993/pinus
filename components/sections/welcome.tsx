@@ -4,14 +4,13 @@ import React, { useRef } from "react";
 import AnimatedSection from "../animated-section";
 import { TextReveal } from "../ui/text-reveal";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper/modules";
 import { MessageCircleMore } from "lucide-react";
 
 // Floating WhatsApp Button Component
 const FloatingWhatsAppButton = () => {
   const phone = "9779855088360"; // Nepal country code +977
   const message = encodeURIComponent(
-    "Hello, I would like to inquire about Pinus Hotel."
+    "Hello, I would like to inquire about Pinus Hotel.",
   );
   const whatsappUrl = `https://wa.me/${phone}?text=${message}`;
 
@@ -36,29 +35,30 @@ const Welcome = () => {
         <AnimatedSection>
           <div className="mb-4 text-center">
             <h2 className="text-4xl lg:text-5xl font-bold font-serif text-center inline-block">
-               <TextReveal type="word" stagger={0.05} delay={0.2}>
-                   Welcome to Pinus Hotel
-               </TextReveal>
+              <TextReveal type="word" stagger={0.05} delay={0.2}>
+                Welcome to Pinus Hotel
+              </TextReveal>
             </h2>
           </div>
           <div className="mb-12 max-w-2xl mx-auto text-center">
-              <p className="text-xl text-center font-sans font-light">
-                 <TextReveal type="line" stagger={0.1} delay={0.6} className="justify-center">
-                    Your Nature Retreat Awaits!
-                 </TextReveal>
-              </p>
+            <p className="text-xl text-center font-sans font-light">
+              <TextReveal
+                type="line"
+                stagger={0.1}
+                delay={0.6}
+                className="justify-center"
+              >
+                Your Nature Retreat Awaits!
+              </TextReveal>
+            </p>
           </div>
         </AnimatedSection>
         <AnimatedSection>
           <div className="w-full h-[450px] lg:h-[600px] lg:w-3/4 mx-auto">
             <Swiper
               slidesPerView={1}
-              spaceBetween={30}
+              spaceBetween={24}
               loop={true}
-              pagination={{
-                dynamicBullets: true,
-              }}
-              modules={[Pagination, Navigation]}
               className="mySwiper"
             >
               <SwiperSlide>

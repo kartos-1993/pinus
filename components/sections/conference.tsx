@@ -1,7 +1,6 @@
 import React from "react";
 import { CircleCheck, Armchair, Zap, CalendarCheck2 } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper/modules";
 import Image from "next/image";
 import AnimatedSection from "../animated-section";
 
@@ -75,12 +74,8 @@ const Conference = () => {
           <div className="lg:w-1/2 h-[450px]">
             <Swiper
               slidesPerView={1}
-              spaceBetween={30}
+              spaceBetween={24}
               loop={true}
-              pagination={{
-                clickable: true,
-              }}
-              modules={[Pagination, Navigation]}
               className="mySwiper mySwiper--conference"
             >
               {conferenceData.map((item, index) => (
@@ -90,6 +85,7 @@ const Conference = () => {
                     alt="dining1"
                     width={600}
                     height={500}
+                    className="w-full h-[420px] rounded-xl object-cover"
                   />
                 </SwiperSlide>
               ))}

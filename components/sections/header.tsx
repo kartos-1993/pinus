@@ -126,7 +126,10 @@ export function Header({ isOpen, setIsOpen }: NavProps) {
                 className="bg-white absolute top-0 right-0 bottom-0 w-full h-screen"
                 variants={sidebarVariants}
               />
-              <Navigation isNavOpen={isOpen} onItemClick={() => setIsOpen(false)} />
+              <Navigation
+                isNavOpen={isOpen}
+                onItemClick={() => setIsOpen(false)}
+              />
               <MenuToggle toggle={() => setIsOpen(!isOpen)} />
             </motion.nav>
           </div>

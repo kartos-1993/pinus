@@ -2,7 +2,6 @@ import React, { useRef } from "react";
 import Image from "next/image";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper/modules";
 
 import { Check, Star } from "lucide-react";
 import { useScroll } from "framer-motion";
@@ -87,15 +86,11 @@ const Dining = () => {
               </div>
             </div>
           </div>
-          <div className="w-full [500px] h-[450px] lg:w-1/2 ">
+          <div className="w-full lg:w-1/2 h-[450px]">
             <Swiper
               slidesPerView={1}
-              spaceBetween={30}
+              spaceBetween={24}
               loop={true}
-              pagination={{
-                clickable: true,
-              }}
-              modules={[Pagination, Navigation]}
               className="mySwiper mySwiper--dining"
             >
               <SwiperSlide>
@@ -104,6 +99,7 @@ const Dining = () => {
                   alt="dining1"
                   width={600}
                   height={500}
+                  className="w-full h-[420px] rounded-xl object-cover"
                 />
                 {/* <img src="/assets/slide/slide1.jpeg" alt="dining1" /> */}
               </SwiperSlide>
@@ -114,6 +110,7 @@ const Dining = () => {
                   alt="dining1"
                   width={600}
                   height={500}
+                  className="w-full h-[420px] rounded-xl object-cover"
                 />
               </SwiperSlide>
               <SwiperSlide>
@@ -123,6 +120,7 @@ const Dining = () => {
                   alt="dining1"
                   width={600}
                   height={500}
+                  className="w-full h-[420px] rounded-xl object-cover"
                 />
               </SwiperSlide>
               <SwiperSlide>
@@ -132,6 +130,7 @@ const Dining = () => {
                   alt="dining1"
                   width={600}
                   height={500}
+                  className="w-full h-[420px] rounded-xl object-cover"
                 />
               </SwiperSlide>
               <SwiperSlide>
@@ -141,6 +140,7 @@ const Dining = () => {
                   alt="dining1"
                   width={600}
                   height={500}
+                  className="w-full h-[420px] rounded-xl object-cover"
                 />
               </SwiperSlide>
               <SwiperSlide>
@@ -150,6 +150,7 @@ const Dining = () => {
                   alt="dining1"
                   width={600}
                   height={500}
+                  className="w-full h-[420px] rounded-xl object-cover"
                 />
               </SwiperSlide>
             </Swiper>
