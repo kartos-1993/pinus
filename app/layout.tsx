@@ -67,7 +67,10 @@ export default function RootLayout({
   const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
   return (
-    <html lang="en" className={`${sourceSans3.variable} ${cormorantGaramond.variable}`}>
+    <html
+      lang="en"
+      className={`${sourceSans3.variable} ${cormorantGaramond.variable}`}
+    >
       <body>{children}</body>
       {gaId ? <GoogleAnalytics gaId={gaId} /> : null}
     </html>

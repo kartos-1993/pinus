@@ -45,7 +45,9 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
 
-      <main className={`relative ${isOpen ? "overflow-hidden" : ""} w-full h-screen`}>
+      <main
+        className={`relative ${isOpen ? "overflow-hidden" : ""} w-full h-screen`}
+      >
         <Header isOpen={isOpen} setIsOpen={setIsOpen} />
         <Hero />
         <Welcome />
